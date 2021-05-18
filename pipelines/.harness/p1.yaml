@@ -1,0 +1,64 @@
+pipeline:
+  name: p1
+  identifier: p1
+  description:
+    expression: false
+    typeString: false
+    jsonResponseField: false
+  stages:
+  - stage:
+      name: s1
+      identifier: s1
+      description:
+      type: Deployment
+      spec:
+        serviceConfig:
+          serviceDefinition:
+            type: Kubernetes
+            spec:
+              manifestOverrideSets: []
+              manifests: []
+              artifacts:
+                sidecars: []
+          service:
+            name: s1
+            identifier: s1
+        infrastructure:
+          infrastructureDefinition:
+            type: KubernetesDirect
+            spec:
+              connectorRef: <+input>
+              namespace: a1
+              releaseName: a1
+          allowSimultaneousDeployments: false
+          infrastructureKey: a1
+          environment:
+            name: e1
+            identifier: e1
+            type: PreProduction
+        execution:
+          steps:
+          - step:
+              name: Rollout Deployment
+              identifier: rolloutDeployment
+              type: K8sRollingDeploy
+              timeout: 10m
+              spec:
+                skipDryRun: false
+          rollbackSteps:
+          - step:
+              name: Rollback Rollout Deployment
+              identifier: rollbackRolloutDeployment
+              type: K8sRollingRollback
+              timeout: 10m
+              spec: {}
+      tags: {}
+      failureStrategies:
+      - onFailure:
+          errors:
+          - AnyOther
+          action:
+            type: StageRollback
+    parallel: null
+  orgIdentifier: default
+  projectIdentifier: Git_Sync_Project
