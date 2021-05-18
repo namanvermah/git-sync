@@ -3,7 +3,7 @@ pipeline:
   identifier: p5
   description:
     expression: false
-    value:
+    value: test description
     typeString: true
     jsonResponseField: false
   stages:
