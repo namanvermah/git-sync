@@ -1,7 +1,7 @@
 pipeline:
   name: p6
   identifier: p6
-  description: something
+  description: something else
   tags: {}
   stages:
   - stage:
