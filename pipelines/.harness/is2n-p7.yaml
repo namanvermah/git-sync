@@ -22,5 +22,5 @@ inputSet:
             infrastructureDefinition:
               type: KubernetesDirect
               spec:
-                namespace: nnn
+                namespace: mnnn
       parallel: null
