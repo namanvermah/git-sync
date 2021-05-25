@@ -6,7 +6,7 @@ pipeline:
   - stage:
       name: s1
       identifier: s1
-      description:
+      description: this
       type: Deployment
       spec:
         serviceConfig:
@@ -62,6 +62,11 @@ pipeline:
           - AnyOther
           action:
             type: StageRollback
+      serviceType:
+        text: Service
+        value: service
+        icon: service
+        disabled: false
     parallel: null
   orgIdentifier: default
   projectIdentifier: Git_Sync_Project
