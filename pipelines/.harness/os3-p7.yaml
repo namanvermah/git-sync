@@ -3,3 +3,4 @@ overlayInputSet:
   identifier: os3
   inputSetReferences:
   - is1
+  - is2
