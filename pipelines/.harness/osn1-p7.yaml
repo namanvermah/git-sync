@@ -1,0 +1,6 @@
+overlayInputSet:
+  name: osn1
+  identifier: osn1
+  inputSetReferences:
+  - is2n
+  - is1n
