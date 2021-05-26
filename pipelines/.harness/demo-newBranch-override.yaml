@@ -1,0 +1,6 @@
+overlayInputSet:
+  name: demo-newBranch-override
+  identifier: demonewBranchoverride
+  inputSetReferences:
+  - demonewBranch
+  - demonewBranchbeoverride
