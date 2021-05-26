@@ -129,7 +129,7 @@ pipeline:
                 source:
                   type: Inline
                   spec:
-                    script: echo ui step
+                    script: echo <+pipeline.stages.ui.spec.infrastructure.infrastructureDefinition.spec.namespace>
                 environmentVariables: []
                 outputVariables: []
                 executionTarget: {}
