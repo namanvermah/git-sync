@@ -42,7 +42,7 @@ pipeline:
           infrastructureDefinition:
             type: KubernetesDirect
             spec:
-              connectorRef: <+input>
+              connectorRef: invalid_connector
               namespace: <+input>
               releaseName: <+input>
           allowSimultaneousDeployments: false
