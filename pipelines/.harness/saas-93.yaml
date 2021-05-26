@@ -1,0 +1,28 @@
+inputSet:
+  name: saas-93
+  identifier: saas93
+  pipeline:
+    identifier: test_github_connector
+    description: null
+    stages:
+    - stage:
+        identifier: shell_script_stage
+        type: Deployment
+        spec:
+          infrastructure:
+            infrastructureDefinition:
+              type: KubernetesDirect
+              spec:
+                namespace: saas-93
+                releaseName: saas-93
+          execution:
+            steps:
+            - step:
+                identifier: echo
+                type: ShellScript
+                spec:
+                  source:
+                    type: Inline
+                    spec:
+                      script: echo saas-93
+      parallel: null
