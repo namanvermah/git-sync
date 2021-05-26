@@ -1,0 +1,31 @@
+inputSet:
+  name: demo-master-ui
+  identifier: demomasterui
+  pipeline:
+    identifier: demo_pipeline
+    description: null
+    stages:
+    - stage:
+        identifier: ui
+        type: Deployment
+        spec:
+          serviceConfig:
+            serviceDefinition:
+              type: Kubernetes
+              spec:
+                manifests:
+                - manifest:
+                    identifier: m1
+                    type: K8sManifest
+                    spec:
+                      store:
+                        type: Github
+                        spec:
+                          branch: master
+          infrastructure:
+            infrastructureDefinition:
+              type: KubernetesDirect
+              spec:
+                namespace: demo-master-ui
+                releaseName: demo-master-ui
+      parallel: null
