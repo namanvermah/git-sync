@@ -1,0 +1,42 @@
+inputSet:
+  name: demo-newBranch
+  identifier: demonewBranch
+  pipeline:
+    identifier: demo_pipeline
+    description: null
+    stages:
+    - stage:
+        identifier: be
+        type: Deployment
+        spec:
+          infrastructure:
+            infrastructureDefinition:
+              type: KubernetesDirect
+              spec:
+                namespace: demo-newBranch
+                releaseName: demo-newBranch
+      parallel: null
+    - stage:
+        identifier: ui
+        type: Deployment
+        spec:
+          serviceConfig:
+            serviceDefinition:
+              type: Kubernetes
+              spec:
+                manifests:
+                - manifest:
+                    identifier: m1
+                    type: K8sManifest
+                    spec:
+                      store:
+                        type: Github
+                        spec:
+                          branch: master
+          infrastructure:
+            infrastructureDefinition:
+              type: KubernetesDirect
+              spec:
+                namespace: demo-newBranch
+                releaseName: demo-newBranch
+      parallel: null
