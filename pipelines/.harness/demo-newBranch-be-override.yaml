@@ -1,0 +1,18 @@
+inputSet:
+  name: demo-newBranch-be-override
+  identifier: demonewBranchbeoverride
+  pipeline:
+    identifier: demo_pipeline
+    description: null
+    stages:
+    - stage:
+        identifier: be
+        type: Deployment
+        spec:
+          infrastructure:
+            infrastructureDefinition:
+              type: KubernetesDirect
+              spec:
+                namespace: demo-newBranch-be-override
+                releaseName: demo-newBranch-be-override
+      parallel: null
