@@ -59,7 +59,7 @@ pipeline:
                 source:
                   type: Inline
                   spec:
-                    script: echo "be step"
+                    script: echo <+pipeline.stages.be.spec.infrastructure.infrastructureDefinition.spec.namespace>
                 environmentVariables: []
                 outputVariables: []
                 executionTarget: {}
