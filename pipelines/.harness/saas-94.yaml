@@ -13,7 +13,7 @@ inputSet:
             infrastructureDefinition:
               type: KubernetesDirect
               spec:
-                namespace: saas-94
+                namespace: saas-95
                 releaseName: saas-94
           execution:
             steps:
