@@ -1,0 +1,6 @@
+overlayInputSet:
+  name: demo-master
+  identifier: demomaster
+  inputSetReferences:
+  - demomasterbe
+  - demomasterui
