@@ -1,0 +1,30 @@
+inputSet:
+  name: something
+  identifier: something
+  orgIdentifier: default
+  projectIdentifier: Git_Sync_Project
+  pipeline:
+    identifier: test_github_connector
+    description: null
+    stages:
+    - stage:
+        identifier: shell_script_stage
+        type: Deployment
+        spec:
+          infrastructure:
+            infrastructureDefinition:
+              type: KubernetesDirect
+              spec:
+                namespace: something
+                releaseName: something
+          execution:
+            steps:
+            - step:
+                identifier: echo
+                type: ShellScript
+                spec:
+                  source:
+                    type: Inline
+                    spec:
+                      script: echo something
+      parallel: null
