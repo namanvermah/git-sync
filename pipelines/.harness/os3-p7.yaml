@@ -1,6 +1,0 @@
-overlayInputSet:
-  name: os3
-  identifier: os3
-  inputSetReferences:
-  - is2
-  - is1
