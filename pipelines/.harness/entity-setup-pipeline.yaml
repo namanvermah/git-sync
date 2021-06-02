@@ -1,0 +1,72 @@
+pipeline:
+  name: entity setup
+  identifier: entity_setup
+  description: null
+  stages:
+  - stage:
+      name: s1
+      identifier: s1
+      description:
+      type: Deployment
+      spec:
+        serviceConfig:
+          serviceDefinition:
+            type: Kubernetes
+            spec:
+              manifestOverrideSets: []
+              manifests:
+              - manifest:
+                  identifier: m1
+                  spec:
+                    store:
+                      type: Github
+                      spec:
+                        connectorRef: namanvermah
+                        gitFetchType: Branch
+                        paths:
+                        - /pipeline/.harness
+                        repoName: git-sync
+                        branch: master
+                    skipResourceVersioning: false
+                  type: K8sManifest
+              artifacts:
+                sidecars: []
+          serviceRef: uiservice
+        infrastructure:
+          environmentRef: beenv
+          infrastructureDefinition:
+            type: KubernetesDirect
+            spec:
+              connectorRef: invalid_connector
+              namespace: def
+              releaseName: def
+          allowSimultaneousDeployments: false
+          infrastructureKey:
+        execution:
+          steps:
+          - step:
+              type: ShellScript
+              name: echo
+              identifier: echo
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: echo done
+                environmentVariables: []
+                outputVariables: []
+                executionTarget: {}
+              timeout: 10m
+          rollbackSteps: []
+      tags: {}
+      failureStrategies:
+      - onFailure:
+          errors:
+          - AllErrors
+          action:
+            type: StageRollback
+    parallel: null
+  orgIdentifier: default
+  projectIdentifier: Git_Sync_Project
