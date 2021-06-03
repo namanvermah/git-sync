@@ -39,7 +39,7 @@ pipeline:
             spec:
               connectorRef: <+input>
               namespace: def
-              releaseName: def
+              releaseName: defe
           allowSimultaneousDeployments: false
           infrastructureKey:
         execution:
