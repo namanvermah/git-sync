@@ -34,6 +34,16 @@ pipeline:
               timeout: 10m
               spec:
                 skipDryRun: false
+          - step:
+              type: K8sApply
+              name: ssss
+              identifier: ssss
+              spec:
+                skipDryRun: false
+                skipSteadyStateCheck: false
+                filePaths:
+                - test
+              timeout: 10m
           rollbackSteps:
           - step:
               name: Rollback Rollout Deployment
