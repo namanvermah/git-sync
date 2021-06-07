@@ -26,7 +26,7 @@ pipeline:
                         paths:
                         - runtime
                         repoName: git-sync
-                        branch: master
+                        branch: <+input>
                     skipResourceVersioning: false
                   type: K8sManifest
               artifacts:
@@ -58,7 +58,7 @@ pipeline:
                 environmentVariables: []
                 outputVariables: []
                 executionTarget: {}
-              timeout: 10m
+              timeout: <+input>
           rollbackSteps: []
       tags: {}
       failureStrategies:
