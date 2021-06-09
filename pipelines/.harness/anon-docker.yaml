@@ -1,0 +1,12 @@
+connector:
+  name: anon docker
+  identifier: anon_docker
+  description:
+  orgIdentifier: default
+  projectIdentifier: Git_Sync_Project
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://index.docker.io/v2/
+    providerType: DockerHub
+    auth:
+      type: Anonymous
