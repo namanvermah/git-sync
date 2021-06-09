@@ -1,0 +1,15 @@
+connector:
+  name: namanvermah docker asd
+  identifier: namanvermah_docker_asd
+  description:
+  orgIdentifier: default
+  projectIdentifier: Git_Sync_Project
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://index.docker.io/v2/
+    providerType: DockerHub
+    auth:
+      type: UsernamePassword
+      spec:
+        username: namanvermah
+        passwordRef: namanvermah_docker_password
