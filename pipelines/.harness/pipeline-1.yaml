@@ -37,7 +37,7 @@ pipeline:
                                   primary:
                                       type: DockerRegistry
                                       spec:
-                                          connectorRef: namanvermah_docker
+                                          connectorRef: namanvermah_docker_asd
                                           imagePath: library/nginx
                                           tag: stable-perl
                       serviceRef: <+input>
