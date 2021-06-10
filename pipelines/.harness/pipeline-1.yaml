@@ -34,12 +34,6 @@ pipeline:
                                         type: K8sManifest
                               artifacts:
                                   sidecars: []
-                                  primary:
-                                      type: DockerRegistry
-                                      spec:
-                                          connectorRef: namanvermah_docker_asd
-                                          imagePath: library/nginx
-                                          tag: stable-perl
                       serviceRef: <+input>
                   infrastructure:
                       environmentRef: <+input>
