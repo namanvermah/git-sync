@@ -24,7 +24,7 @@ pipeline:
                                             store:
                                                 type: Github
                                                 spec:
-                                                    connectorRef: <+pipeline.stages.s1.pipeline.stages.s1.spec.serviceConfig.serviceRef>
+                                                    connectorRef: <+pipeline.stages.s1.spec.serviceConfig.serviceRef>
                                                     gitFetchType: Branch
                                                     paths:
                                                         - runtime
