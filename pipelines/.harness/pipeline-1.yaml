@@ -24,7 +24,7 @@ pipeline:
                                             store:
                                                 type: Github
                                                 spec:
-                                                    connectorRef: namanvermahcopy
+                                                    connectorRef: <+pipeline.stages.s1.pipeline.stages.s1.spec.serviceConfig.serviceRef>>
                                                     gitFetchType: Branch
                                                     paths:
                                                         - runtime
