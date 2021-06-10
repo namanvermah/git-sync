@@ -24,7 +24,7 @@ pipeline:
                                             store:
                                                 type: Github
                                                 spec:
-                                                    connectorRef: namanvermah
+                                                    connectorRef: namanvermahcopy
                                                     gitFetchType: Branch
                                                     paths:
                                                         - runtime
