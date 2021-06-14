@@ -1,6 +1,7 @@
 inputSet:
   identifier: "use_this_diff_branch"
   name: "use this diff branch"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "Git_Sync_Project"
   pipeline:
@@ -31,4 +32,4 @@ inputSet:
             - step:
                 identifier: "echo"
                 type: "ShellScript"
-                timeout: "15m"
+                timeout: "10m"
