@@ -1,0 +1,12 @@
+connector:
+  name: gcp1-1
+  identifier: gcp11
+  description:
+  orgIdentifier: default
+  projectIdentifier: Git_Sync_Project
+  type: Gcp
+  spec:
+    credential:
+      type: InheritFromDelegate
+    delegateSelectors:
+    - primary
