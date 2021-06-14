@@ -24,7 +24,7 @@ pipeline:
                                       spec:
                                           connectorRef: <+pipeline.name>
                                           imagePath: library/nginx
-                                          tag: <+input>
+                                          tag: latest
                       serviceRef: something
                   infrastructure:
                       environmentRef: something
