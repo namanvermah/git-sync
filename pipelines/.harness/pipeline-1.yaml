@@ -24,7 +24,7 @@ pipeline:
                                             store:
                                                 type: Github
                                                 spec:
-                                                    connectorRef: nvh_repo_2a
+                                                    connectorRef: nvh_repo_2
                                                     gitFetchType: Branch
                                                     paths:
                                                         - runtime
