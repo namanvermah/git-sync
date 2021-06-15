@@ -28,14 +28,14 @@ pipeline:
                                                     gitFetchType: Branch
                                                     paths:
                                                         - runtime
-                                                    branch: <+input>
+                                                    branch: master
                                             skipResourceVersioning: false
                                         type: K8sManifest
                               artifacts:
                                   sidecars: []
                       serviceRef: something
                   infrastructure:
-                      environmentRef: <+input>
+                      environmentRef: something
                       infrastructureDefinition:
                           type: KubernetesDirect
                           spec:
