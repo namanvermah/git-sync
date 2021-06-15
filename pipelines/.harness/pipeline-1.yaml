@@ -24,17 +24,16 @@ pipeline:
                                             store:
                                                 type: Github
                                                 spec:
-                                                    connectorRef: <+pipeline.stages.s1.spec.serviceConfig.serviceRef>
+                                                    connectorRef: nvh_repo_2
                                                     gitFetchType: Branch
                                                     paths:
                                                         - runtime
-                                                    repoName: git-sync
                                                     branch: <+input>
                                             skipResourceVersioning: false
                                         type: K8sManifest
                               artifacts:
                                   sidecars: []
-                      serviceRef: <+input>
+                      serviceRef: something
                   infrastructure:
                       environmentRef: <+input>
                       infrastructureDefinition:
