@@ -60,7 +60,7 @@ pipeline:
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
-                                timeout: <+input>
+                                timeout: 10m
                       rollbackSteps: []
               tags: {}
               failureStrategies:
