@@ -27,7 +27,7 @@ pipeline:
                                                     connectorRef: nvh_repo_2
                                                     gitFetchType: Branch
                                                     paths:
-                                                        - runtime
+                                                        - runtimecc
                                                     branch: master
                                             skipResourceVersioning: false
                                         type: K8sManifest
