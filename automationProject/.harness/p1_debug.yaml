@@ -18,7 +18,7 @@ pipeline:
                               manifestOverrideSets: []
                               manifests:
                                   - manifest:
-                                        identifier: ss
+                                        identifier: ssss
                                         spec:
                                             store:
                                                 type: Github
