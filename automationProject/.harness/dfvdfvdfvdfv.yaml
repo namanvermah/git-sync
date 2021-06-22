@@ -1,0 +1,17 @@
+inputSet:
+  identifier: "dfvdfvdfvdfv"
+  name: "dfvdfvdfvdfv"
+  orgIdentifier: "default"
+  projectIdentifier: "Naman_GS_Project"
+  pipeline:
+    identifier: "p1_debug"
+    stages:
+    - stage:
+        identifier: "sw1"
+        type: "Deployment"
+        spec:
+          infrastructure:
+            infrastructureDefinition:
+              type: "KubernetesDirect"
+              spec:
+                namespace: "vfvfvfvf"
