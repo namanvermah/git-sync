@@ -27,7 +27,7 @@ pipeline:
                                                     gitFetchType: Branch
                                                     paths:
                                                         - ss
-                                                    repoName: ss
+                                                    repoName: ssss
                                                     branch: ss
                                             skipResourceVersioning: false
                                         type: K8sManifest
