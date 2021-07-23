@@ -24,3 +24,64 @@ pipeline:
                                     outputVariables: []
                                 timeout: <+input>
               tags: {}
+        - stage:
+              name: s1
+              identifier: s1
+              description: ""
+              type: Deployment
+              spec:
+                  serviceConfig:
+                      serviceDefinition:
+                          type: Kubernetes
+                          spec:
+                              manifests:
+                                  - manifest:
+                                        identifier: m1
+                                        type: K8sManifest
+                                        spec:
+                                            store:
+                                                type: Github
+                                                spec:
+                                                    connectorRef: nvh_git_sync
+                                                    gitFetchType: Branch
+                                                    paths:
+                                                        - s1
+                                                    repoName: <+input>
+                                                    branch: master
+                                            skipResourceVersioning: false
+                              variables: []
+                      serviceRef: echo
+                  infrastructure:
+                      environmentRef: echo
+                      infrastructureDefinition:
+                          type: KubernetesDirect
+                          spec:
+                              connectorRef: account.temp
+                              namespace: ssdx
+                              releaseName: release-<+INFRA_KEY>
+                      allowSimultaneousDeployments: false
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: echo
+                                identifier: echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: echo done
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: 10m
+                      rollbackSteps: []
+              tags: {}
+              failureStrategies:
+                  - onFailure:
+                        errors:
+                            - AllErrors
+                        action:
+                            type: StageRollback
