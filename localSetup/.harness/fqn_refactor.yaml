@@ -1,0 +1,26 @@
+pipeline:
+    name: fqn refactor
+    identifier: fqn_refactor
+    projectIdentifier: nvh_git_sync
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: Http
+                                name: search
+                                identifier: search
+                                spec:
+                                    url: https://www.bing.com
+                                    method: GET
+                                    headers: []
+                                    outputVariables: []
+                                timeout: <+input>
+              tags: {}
