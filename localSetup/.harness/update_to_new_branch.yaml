@@ -23,5 +23,15 @@ pipeline:
                                     headers: []
                                     outputVariables: []
                                 timeout: 10s
+                          - step:
+                                type: Http
+                                name: search again
+                                identifier: search_again
+                                spec:
+                                    url: https://www.bing.com
+                                    method: GET
+                                    headers: []
+                                    outputVariables: []
+                                timeout: 10s
                   serviceDependencies: []
               tags: {}
