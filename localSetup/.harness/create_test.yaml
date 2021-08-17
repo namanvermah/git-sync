@@ -22,6 +22,6 @@ pipeline:
                                     method: GET
                                     headers: []
                                     outputVariables: []
-                                timeout: 15s
+                                timeout: <+input>
                   serviceDependencies: []
               tags: {}
