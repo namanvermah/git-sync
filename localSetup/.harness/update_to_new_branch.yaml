@@ -1,27 +1,21 @@
 pipeline:
-    name: update to new branch
-    identifier: update_to_new_branch
-    projectIdentifier: nvh_git_sync
-    orgIdentifier: default
-    tags: {}
     stages:
         - stage:
-              name: a1
-              identifier: a1
-              description: stage description
               type: Approval
               spec:
                   execution:
                       steps:
                           - step:
                                 type: Http
-                                name: search
-                                identifier: search
+                                timeout: 10m
                                 spec:
                                     url: https://www.google.com
                                     method: GET
-                                    headers: []
-                                    outputVariables: []
-                                timeout: 10m
-                  serviceDependencies: []
-              tags: {}
+                                name: search
+                                identifier: search
+              name: a1
+              identifier: a1
+    projectIdentifier: nvh_git_sync
+    orgIdentifier: default
+    name: update to new branch
+    identifier: update_to_new_branch
