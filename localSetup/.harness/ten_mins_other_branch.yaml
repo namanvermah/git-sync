@@ -1,0 +1,18 @@
+inputSet:
+  identifier: "ten_mins_other_branch"
+  name: "ten mins other branch"
+  orgIdentifier: "default"
+  projectIdentifier: "nvh_git_sync"
+  pipeline:
+    identifier: "create_test"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "search"
+                type: "Http"
+                timeout: "10m"
