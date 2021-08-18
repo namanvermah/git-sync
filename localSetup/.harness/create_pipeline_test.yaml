@@ -1,27 +1,21 @@
 pipeline:
-    name: create pipeline test
-    identifier: create_pipeline_test
-    projectIdentifier: nvh_git_sync
-    orgIdentifier: default
-    tags: {}
     stages:
         - stage:
-              name: a1
-              identifier: a1
-              description: ""
               type: Approval
               spec:
                   execution:
                       steps:
                           - step:
                                 type: Http
-                                name: search
-                                identifier: search
+                                timeout: 15s
                                 spec:
                                     url: <+input>
                                     method: GET
-                                    headers: []
-                                    outputVariables: []
-                                timeout: 15s
-                  serviceDependencies: []
-              tags: {}
+                                name: search
+                                identifier: search
+              name: a1
+              identifier: a1
+    projectIdentifier: nvh_git_sync
+    orgIdentifier: default
+    name: create pipeline test
+    identifier: create_pipeline_test
