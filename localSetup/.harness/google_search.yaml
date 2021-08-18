@@ -1,0 +1,19 @@
+inputSet:
+  identifier: "google_search"
+  name: "google search"
+  orgIdentifier: "default"
+  projectIdentifier: "nvh_git_sync"
+  pipeline:
+    identifier: "create_pipeline_test"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "search"
+                type: "Http"
+                spec:
+                  url: "https://www.google.com"
