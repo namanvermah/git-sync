@@ -1,0 +1,27 @@
+pipeline:
+    name: basic approval
+    identifier: basic_approval
+    projectIdentifier: Git_Sync_Delegate
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a
+              identifier: a
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: Http
+                                name: ss
+                                identifier: ss
+                                spec:
+                                    url: https://www.google.com
+                                    method: GET
+                                    headers: []
+                                    outputVariables: []
+                                timeout: 10s
+                  serviceDependencies: []
+              tags: {}
