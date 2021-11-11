@@ -1,0 +1,32 @@
+pipeline:
+    name: approval sdsdsd
+    identifier: approval_sdsdsd
+    projectIdentifier: Git_Sync_Delegate
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: sds
+              identifier: sds
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: echo
+                                identifier: echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: <+input>
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: 10m
+                  serviceDependencies: []
+              tags: {}
