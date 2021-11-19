@@ -11,6 +11,7 @@ pipeline:
                                 spec:
                                     url: <+input>
                                     method: GET
+                                    outputVariables: [
                                 name: search
                                 identifier: search
               name: a1
