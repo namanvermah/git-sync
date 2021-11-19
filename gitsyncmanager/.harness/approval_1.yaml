@@ -14,7 +14,6 @@ pipeline:
                                 name: search
                                 identifier: search
               name: a1
-              identifier: a1
     projectIdentifier: Git_Sync_Manager
     orgIdentifier: default
     name: approval 1
