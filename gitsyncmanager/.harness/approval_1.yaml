@@ -7,11 +7,10 @@ pipeline:
                       steps:
                           - step:
                                 type: Http
-                                timeout: 10m
+                                timeout: 10s
                                 spec:
                                     url: <+input>
                                     method: GET
-                                    outputVariables: [
                                 name: search
                                 identifier: search
               name: a1
