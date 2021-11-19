@@ -1,0 +1,19 @@
+inputSet:
+  identifier: "google"
+  name: "google"
+  orgIdentifier: "default"
+  projectIdentifier: "Git_Sync_Manager"
+  pipeline:
+    identifier: "approval_1"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "search"
+                type: "Http"
+                spec:
+                  url: "https://www.google.com"
