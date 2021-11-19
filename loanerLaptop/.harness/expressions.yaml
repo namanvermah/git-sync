@@ -40,7 +40,10 @@ pipeline:
                                         spec:
                                             script: d11d1
                                     environmentVariables: []
-                                    outputVariables: []
+                                    outputVariables:
+                                        - name: s1
+                                          type: String
+                                          value: s1
                                     executionTarget: {}
                                 timeout: 10m
                       rollbackSteps: []
