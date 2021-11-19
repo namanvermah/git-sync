@@ -1,0 +1,15 @@
+connector:
+  name: nvh docker
+  identifier: nvh_docker
+  description:
+  orgIdentifier: default
+  projectIdentifier: Git_Sync_Manager
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://index.docker.io/v2/
+    providerType: DockerHub
+    auth:
+      type: UsernamePassword
+      spec:
+        username: namanvermah
+        passwordRef: nvh_docker
