@@ -22,7 +22,7 @@ pipeline:
                                       type: DockerRegistry
                                       spec:
                                           connectorRef: <+input>
-                                          imagePath: <+input>
+                                          imagePath: library/nginx
                                           tag: <+input>
                   infrastructure:
                       environmentRef: "e1"
