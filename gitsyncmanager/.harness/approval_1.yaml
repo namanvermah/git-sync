@@ -1,0 +1,27 @@
+pipeline:
+    name: approval 1
+    identifier: approval_1
+    projectIdentifier: Git_Sync_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: Http
+                                name: search
+                                identifier: search
+                                spec:
+                                    url: <+input>
+                                    method: GET
+                                    headers: []
+                                    outputVariables: []
+                                timeout: 10s
+                  serviceDependencies: []
+              tags: {}
