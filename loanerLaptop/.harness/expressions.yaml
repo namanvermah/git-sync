@@ -17,6 +17,13 @@ pipeline:
                           type: Kubernetes
                           spec:
                               variables: []
+                              artifacts:
+                                  primary:
+                                      type: DockerRegistry
+                                      spec:
+                                          connectorRef: <+input>
+                                          imagePath: <+input>
+                                          tag: <+input>
                   infrastructure:
                       environmentRef: "e1"
                       infrastructureDefinition:
