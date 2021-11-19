@@ -14,7 +14,6 @@ pipeline:
                   execution:
                       steps:
                           - step:
-                                type: Http
                                 name: search
                                 identifier: search
                                 spec:
