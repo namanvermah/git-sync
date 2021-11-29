@@ -20,3 +20,4 @@ inputSet:
                     type: "Inline"
                     spec:
                       script: "echo eh"
+                      s: d
