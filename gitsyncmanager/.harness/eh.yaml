@@ -1,6 +1,7 @@
 inputSet:
   identifier: "eh"
   name: "eh"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "Git_Sync_Manager"
   pipeline:
@@ -20,4 +21,3 @@ inputSet:
                     type: "Inline"
                     spec:
                       script: "echo eh"
-                      s: d
