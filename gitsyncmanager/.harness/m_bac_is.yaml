@@ -20,4 +20,3 @@ inputSet:
                     type: "Inline"
                     spec:
                       script: "echo m bac is from git"
-                      ss: dd
