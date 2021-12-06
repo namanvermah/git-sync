@@ -1,20 +1,22 @@
-template:
-    name: Shell 24
-    identifier: Shell_24
-    type: Step
-    projectIdentifier: Git_Sync_Manager
-    orgIdentifier: default
-    tags: {}
-    spec:
-        type: ShellScript
-        timeout: 10m
+inputSet:
+  identifier: "m_bac_is"
+  name: "m bac is"
+  orgIdentifier: "default"
+  projectIdentifier: "Git_Sync_Manager"
+  pipeline:
+    identifier: "m_bac"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
         spec:
-            shell: Bash
-            onDelegate: true
-            source:
-                type: Inline
+          execution:
+            steps:
+            - step:
+                identifier: "e"
+                type: "ShellScript"
                 spec:
-                    script: echo done
-            environmentVariables: []
-            outputVariables: []
-            executionTarget: {}
+                  source:
+                    type: "Inline"
+                    spec:
+                      script: "echo m bac is from git"
