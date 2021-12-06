@@ -1,7 +1,6 @@
 template:
     name: Shell 24
     identifier: Shell_24
-    versionLabel: Version1
     type: Step
     projectIdentifier: Git_Sync_Manager
     orgIdentifier: default
