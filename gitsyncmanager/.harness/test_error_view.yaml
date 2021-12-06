@@ -16,6 +16,7 @@ pipeline:
                           - step:
                                 name: echo
                                 identifier: echo
+                                type: ShellScript
                                 spec:
                                     shell: Bash
                                     onDelegate: true
