@@ -20,4 +20,5 @@ inputSet:
                     type: "Inline"
                     spec:
                       script: "echo done"
+                      ss: dd
                 timeout: "10m"
