@@ -1,0 +1,32 @@
+pipeline:
+    name: test error view
+    identifier: test_error_view
+    projectIdentifier: Git_Sync_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: "e1"
+              identifier: "e1"
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: echo
+                                identifier: echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: <+input>
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: <+input>
+                  serviceDependencies: []
+              tags: {}
