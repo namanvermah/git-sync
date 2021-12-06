@@ -1,1 +1,21 @@
-mm
+template:
+    name: Shell 24
+    identifier: Shell_24
+    versionLabel: Version1
+    type: Step
+    projectIdentifier: Git_Sync_Manager
+    orgIdentifier: default
+    tags: {}
+    spec:
+        type: ShellScript
+        timeout: 10m
+        spec:
+            shell: Bash
+            onDelegate: true
+            source:
+                type: Inline
+                spec:
+                    script: echo done
+            environmentVariables: []
+            outputVariables: []
+            executionTarget: {}
