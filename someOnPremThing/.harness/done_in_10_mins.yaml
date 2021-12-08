@@ -1,0 +1,11 @@
+overlayInputSet:
+    name: done in 10 mins
+    identifier: done_in_10_mins
+    description: dddd
+    orgIdentifier: default
+    projectIdentifier: git_sync_test_proj
+    pipelineIdentifier: a1
+    inputSetReferences:
+        - ten_mins
+        - echo_done
+    tags: {}
