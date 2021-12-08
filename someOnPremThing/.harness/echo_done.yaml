@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "echo_done"
+  name: "echo done"
+  orgIdentifier: "default"
+  projectIdentifier: "git_sync_test_proj"
+  pipeline:
+    identifier: "a1"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "echo"
+                type: "ShellScript"
+                spec:
+                  source:
+                    type: "Inline"
+                    spec:
+                      script: "echo done"
