@@ -19,4 +19,4 @@ inputSet:
                   source:
                     type: "Inline"
                     spec:
-                      script: "echo done"
+                      script: "echo done done done"
