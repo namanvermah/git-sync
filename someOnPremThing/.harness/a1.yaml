@@ -1,5 +1,5 @@
 pipeline:
-    name: a1
+    name: a1-updated
     identifier: a1
     projectIdentifier: git_sync_test_proj
     orgIdentifier: default
