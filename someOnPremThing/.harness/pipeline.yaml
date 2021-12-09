@@ -16,7 +16,10 @@ pipeline:
                       serviceDefinition:
                           type: Kubernetes
                           spec:
-                              variables: []
+                              variables:
+                                  - name: var1
+                                    type: String
+                                    value: <+input>
                   infrastructure:
                       environmentRef: envw
                       infrastructureDefinition:
