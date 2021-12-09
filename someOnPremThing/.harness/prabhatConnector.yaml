@@ -1,0 +1,12 @@
+connector:
+  name: prabhatConnector
+  identifier: prabhatConnector
+  description:
+  orgIdentifier: default
+  projectIdentifier: git_sync_test_proj
+  type: Nexus
+  spec:
+    nexusServerUrl: connectors
+    version: 3.x
+    auth:
+      type: Anonymous
