@@ -1,0 +1,10 @@
+overlayInputSet:
+    name: ol1
+    identifier: ol1
+    orgIdentifier: default
+    projectIdentifier: git_sync_test_proj
+    pipelineIdentifier: pipeline
+    inputSetReferences:
+        - ip2
+        - ip1
+    tags: {}
