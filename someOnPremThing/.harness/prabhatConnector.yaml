@@ -1,5 +1,5 @@
 connector:
-  name: prabhatConnector
+  name: prabhatConnectorUpdated
   identifier: prabhatConnector
   description:
   orgIdentifier: default
