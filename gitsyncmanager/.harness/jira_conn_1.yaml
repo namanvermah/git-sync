@@ -1,0 +1,11 @@
+connector:
+  name: jira conn 1
+  identifier: jira_conn_1
+  description:
+  orgIdentifier: default
+  projectIdentifier: Git_Sync_Manager
+  type: Jira
+  spec:
+    jiraUrl: https://harness.atlassian.net/
+    username: namanverma
+    passwordRef: nvh_docker
