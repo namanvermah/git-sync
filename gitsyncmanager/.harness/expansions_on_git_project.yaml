@@ -85,3 +85,47 @@ pipeline:
                             - AllErrors
                         action:
                             type: StageRollback
+        - stage:
+              name: d2
+              identifier: d2
+              description: ""
+              type: Deployment
+              spec:
+                  serviceConfig:
+                      useFromStage:
+                          stage: d1
+                  infrastructure:
+                      environmentRef: "e1"
+                      infrastructureDefinition:
+                          type: KubernetesDirect
+                          spec:
+                              connectorRef: org.does_not_work
+                              namespace: dddd
+                              releaseName: release-<+INFRA_KEY>
+                      allowSimultaneousDeployments: false
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: exit
+                                identifier: exit
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: exit 0
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: 10m
+                      rollbackSteps: []
+                  serviceDependencies: []
+              tags: {}
+              failureStrategies:
+                  - onFailure:
+                        errors:
+                            - AllErrors
+                        action:
+                            type: StageRollback
