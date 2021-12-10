@@ -1,0 +1,35 @@
+pipeline:
+    name: expansions on git project
+    identifier: expansions_on_git_project
+    projectIdentifier: Git_Sync_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: JiraCreate
+                                name: first create
+                                identifier: first_create
+                                spec:
+                                    connectorRef: jira_conn_1
+                                    projectKey: <+input>
+                                    issueType: <+input>
+                                    fields:
+                                        - name: Summary
+                                          value: A test ticket
+                                        - name: Description
+                                          value: ""
+                                timeout: 1d
+                  serviceDependencies: []
+                  infrastructure:
+                      environmentRef: ""
+                      infrastructureDefinition: {}
+                      allowSimultaneousDeployments: false
+              tags: {}
