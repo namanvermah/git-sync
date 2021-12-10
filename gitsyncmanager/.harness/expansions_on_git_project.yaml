@@ -33,3 +33,55 @@ pipeline:
                       infrastructureDefinition: {}
                       allowSimultaneousDeployments: false
               tags: {}
+        - stage:
+              name: d1
+              identifier: d1
+              description: ""
+              type: Deployment
+              spec:
+                  serviceConfig:
+                      serviceRef: s1
+                      serviceDefinition:
+                          type: Kubernetes
+                          spec:
+                              variables: []
+                              artifacts:
+                                  primary:
+                                      type: DockerRegistry
+                                      spec:
+                                          connectorRef: nvh_docker
+                                          imagePath: <+input>
+                                          tag: <+input>
+                  infrastructure:
+                      environmentRef: "e1"
+                      infrastructureDefinition:
+                          type: KubernetesDirect
+                          spec:
+                              connectorRef: account.does_not_work
+                              namespace: ssssss
+                              releaseName: release-<+INFRA_KEY>
+                      allowSimultaneousDeployments: false
+                  execution:
+                      steps:
+                          - step:
+                                type: JiraCreate
+                                name: second jira
+                                identifier: second_jira
+                                spec:
+                                    connectorRef: jira_conn_1
+                                    projectKey: <+input>
+                                    issueType: <+input>
+                                    fields:
+                                        - name: Summary
+                                          value: <+input>
+                                        - name: Description
+                                          value: ""
+                                timeout: 1d
+                      rollbackSteps: []
+              tags: {}
+              failureStrategies:
+                  - onFailure:
+                        errors:
+                            - AllErrors
+                        action:
+                            type: StageRollback
