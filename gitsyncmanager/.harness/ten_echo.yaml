@@ -1,0 +1,23 @@
+inputSet:
+  identifier: "ten_echo"
+  name: "ten echo"
+  orgIdentifier: "default"
+  projectIdentifier: "Git_Sync_Manager"
+  pipeline:
+    identifier: "test_error_view"
+    stages:
+    - stage:
+        identifier: "e1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "echo"
+                type: "ShellScript"
+                spec:
+                  source:
+                    type: "Inline"
+                    spec:
+                      script: "echo done"
+                timeout: "10m"
