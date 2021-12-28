@@ -11,5 +11,4 @@ connector:
     auth:
       type: UsernamePassword
       spec:
-        username: namanvermah
         passwordRef: nvh_docker
