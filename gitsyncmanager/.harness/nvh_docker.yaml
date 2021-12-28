@@ -1,7 +1,6 @@
 connector:
   name: nvh docker
   identifier: nvh_docker
-  description:
   orgIdentifier: default
   projectIdentifier: Git_Sync_Manager
   type: DockerRegistry
@@ -11,4 +10,5 @@ connector:
     auth:
       type: UsernamePassword
       spec:
+        username: namanvermah
         passwordRef: nvh_docker
