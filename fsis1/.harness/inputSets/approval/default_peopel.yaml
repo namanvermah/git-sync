@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "default_peopel"
+  name: "default peopel"
+  orgIdentifier: "alternate"
+  projectIdentifier: "FS_IS1"
+  pipeline:
+    identifier: "approval"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "approval"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    userGroups:
+                    - "account.default_peeps"
