@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "echo_1"
+  name: "echo 1"
+  orgIdentifier: "default"
+  projectIdentifier: "GS_Manager"
+  pipeline:
+    identifier: "prod_env"
+    stages:
+    - stage:
+        identifier: "d1"
+        type: "Deployment"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "echo"
+                type: "ShellScript"
+                spec:
+                  source:
+                    type: "Inline"
+                    spec:
+                      script: "echo 1"
