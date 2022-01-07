@@ -23,7 +23,7 @@ pipeline:
                           type: KubernetesDirect
                           spec:
                               connectorRef: temp
-                              namespace: blah
+                              namespace: blah-blah
                               releaseName: release-<+INFRA_KEY>
                       allowSimultaneousDeployments: false
                   execution:
