@@ -1,0 +1,12 @@
+connector:
+  name: temp
+  identifier: temp
+  description:
+  orgIdentifier: default
+  projectIdentifier: GS_Manager
+  type: K8sCluster
+  spec:
+    credential:
+      type: InheritFromDelegate
+    delegateSelectors:
+    - acctgroup
