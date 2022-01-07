@@ -1,53 +1,45 @@
 pipeline:
-    name: prod env
-    identifier: prod_env
-    projectIdentifier: GS_Manager
-    orgIdentifier: default
-    tags: {}
     stages:
         - stage:
-              name: d1
-              identifier: d1
-              description: ""
               type: Deployment
               spec:
                   serviceConfig:
                       serviceRef: lightService
                       serviceDefinition:
                           type: Kubernetes
-                          spec:
-                              variables: []
+                          spec: {}
                   infrastructure:
-                      environmentRef: prod
                       infrastructureDefinition:
                           type: KubernetesDirect
                           spec:
-                              connectorRef: temp
-                              namespace: blah-blah
                               releaseName: release-<+INFRA_KEY>
+                              namespace: blah-blah
+                              connectorRef: temp
+                      environmentRef: prod
                       allowSimultaneousDeployments: false
                   execution:
                       steps:
                           - step:
                                 type: ShellScript
-                                name: echo
-                                identifier: echo
+                                timeout: 10m
                                 spec:
-                                    shell: Bash
-                                    onDelegate: true
                                     source:
                                         type: Inline
                                         spec:
                                             script: echo done
-                                    environmentVariables: []
-                                    outputVariables: []
-                                    executionTarget: {}
-                                timeout: 10m
-                      rollbackSteps: []
-              tags: {}
+                                    shell: Bash
+                                    onDelegate: true
+                                name: echo
+                                identifier: echo
+              name: d1
+              identifier: d1
               failureStrategies:
                   - onFailure:
                         errors:
                             - AllErrors
                         action:
                             type: StageRollback
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    name: prod env
+    identifier: prod_env
