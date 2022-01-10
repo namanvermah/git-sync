@@ -1,0 +1,79 @@
+pipeline:
+    name: def2
+    identifier: def2
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    allowStageExecutions: true
+    tags: {}
+    stages:
+        - stage:
+              name: approve1
+              identifier: approve1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: ApprovalH
+                                identifier: approvalH
+                                type: HarnessApproval
+                                timeout: 1d
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups:
+                                            - account.default_peeps
+                                    approverInputs: []
+              tags: {}
+        - stage:
+              name: d1
+              identifier: d1
+              description: ""
+              type: Deployment
+              spec:
+                  serviceConfig:
+                      serviceRef: lightService
+                      serviceDefinition:
+                          type: Kubernetes
+                          spec:
+                              variables: []
+                  infrastructure:
+                      environmentRef: prod
+                      infrastructureDefinition:
+                          type: KubernetesDirect
+                          spec:
+                              connectorRef: account.temp
+                              namespace: sdsdsdsds
+                              releaseName: release-<+INFRA_KEY>
+                      allowSimultaneousDeployments: false
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: echo
+                                identifier: echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: <+input>
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: 10m
+                      rollbackSteps: []
+              tags: {}
+              failureStrategies:
+                  - onFailure:
+                        errors:
+                            - AllErrors
+                        action:
+                            type: StageRollback
