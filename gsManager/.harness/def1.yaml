@@ -51,7 +51,7 @@ pipeline:
                               connectorRef: account.temp
                               namespace: sdsdsdsds
                               releaseName: release-<+INFRA_KEY>
-                      allowSimultaneousDeployments: true
+                      allowSimultaneousDeployments: false
                   execution:
                       steps:
                           - step:
