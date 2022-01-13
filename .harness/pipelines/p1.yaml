@@ -1,0 +1,67 @@
+pipeline:
+    name: p1
+    identifier: p1
+    projectIdentifier: FS_Entity_Setup
+    orgIdentifier: alternate
+    tags: {}
+    stages:
+        - stage:
+              name: d1
+              identifier: d1
+              description: ""
+              type: Deployment
+              spec:
+                  serviceConfig:
+                      serviceRef: s1
+                      serviceDefinition:
+                          type: Kubernetes
+                          spec:
+                              variables: []
+                              manifests:
+                                  - manifest:
+                                        identifier: ss1
+                                        type: K8sManifest
+                                        spec:
+                                            store:
+                                                type: Github
+                                                spec:
+                                                    connectorRef: nvh
+                                                    gitFetchType: Branch
+                                                    paths:
+                                                        - sddsds
+                                                    branch: master
+                                            skipResourceVersioning: false
+                  infrastructure:
+                      environmentRef: nonprod
+                      infrastructureDefinition:
+                          type: KubernetesDirect
+                          spec:
+                              connectorRef: account.temp
+                              namespace: ewewewew
+                              releaseName: release-<+INFRA_KEY>
+                      allowSimultaneousDeployments: false
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: echo
+                                identifier: echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: echo done
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: 10m
+                      rollbackSteps: []
+              tags: {}
+              failureStrategies:
+                  - onFailure:
+                        errors:
+                            - AllErrors
+                        action:
+                            type: StageRollback
