@@ -1,0 +1,33 @@
+pipeline:
+    name: nowhere else
+    identifier: nowhere_else
+    allowStageExecutions: false
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: ec
+                                identifier: ec
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: echo d
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: 10m
+                  serviceDependencies: []
+              tags: {}
