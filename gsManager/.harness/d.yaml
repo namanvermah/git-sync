@@ -6,43 +6,81 @@ pipeline:
     orgIdentifier: default
     tags: {}
     stages:
-        - stage:
-              name: d1
-              identifier: d1
-              description: ""
-              type: Deployment
-              spec:
-                  serviceConfig:
-                      serviceRef: lightService
-                      serviceDefinition:
-                          type: Kubernetes
-                          spec:
-                              variables: []
-                  infrastructure:
-                      environmentRef: prod
-                      infrastructureDefinition:
-                          type: KubernetesDirect
-                          spec:
-                              connectorRef: temp
-                              namespace: d1d1d11d
-                              releaseName: release-<+INFRA_KEY>
-                      allowSimultaneousDeployments: false
-                  execution:
-                      steps:
-                          - step:
-                                type: ShellScript
-                                name: echo
-                                identifier: echo
+        - parallel:
+              - stage:
+                    name: d1
+                    identifier: d1
+                    description: ""
+                    type: Deployment
+                    spec:
+                        serviceConfig:
+                            serviceRef: lightService
+                            serviceDefinition:
+                                type: Kubernetes
                                 spec:
-                                    shell: Bash
-                                    onDelegate: true
-                                    source:
-                                        type: Inline
-                                        spec:
-                                            script: echo done
-                                    environmentVariables: []
-                                    outputVariables: []
-                                    executionTarget: {}
-                                timeout: 10m
-                      rollbackSteps: []
-              tags: {}
+                                    variables: []
+                        infrastructure:
+                            environmentRef: prod
+                            infrastructureDefinition:
+                                type: KubernetesDirect
+                                spec:
+                                    connectorRef: temp
+                                    namespace: d1d1d11d
+                                    releaseName: release-<+INFRA_KEY>
+                            allowSimultaneousDeployments: false
+                        execution:
+                            steps:
+                                - step:
+                                      type: ShellScript
+                                      name: echo
+                                      identifier: echo
+                                      spec:
+                                          shell: Bash
+                                          onDelegate: true
+                                          source:
+                                              type: Inline
+                                              spec:
+                                                  script: echo done
+                                          environmentVariables: []
+                                          outputVariables: []
+                                          executionTarget: {}
+                                      timeout: 10m
+                            rollbackSteps: []
+                    tags: {}
+              - stage:
+                    name: d2
+                    identifier: d2
+                    description: ""
+                    type: Deployment
+                    spec:
+                        serviceConfig:
+                            useFromStage:
+                                stage: d1
+                        infrastructure:
+                            environmentRef: prod
+                            infrastructureDefinition:
+                                type: KubernetesDirect
+                                spec:
+                                    connectorRef: temp
+                                    namespace: dddd
+                                    releaseName: release-<+INFRA_KEY>
+                            allowSimultaneousDeployments: false
+                        execution:
+                            steps:
+                                - step:
+                                      type: ShellScript
+                                      name: echo
+                                      identifier: echo
+                                      spec:
+                                          shell: Bash
+                                          onDelegate: true
+                                          source:
+                                              type: Inline
+                                              spec:
+                                                  script: echo done
+                                          environmentVariables: []
+                                          outputVariables: []
+                                          executionTarget: {}
+                                      timeout: 10m
+                            rollbackSteps: []
+                    tags: {}
