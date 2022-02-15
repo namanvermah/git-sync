@@ -32,3 +32,9 @@ pipeline:
                                             - account.rbac_peeps
                                     approverInputs: []
               tags: {}
+        - stage:
+              name: a2
+              identifier: a2
+              template:
+                  templateRef: ApprovalShell
+                  versionLabel: Version1
