@@ -7,12 +7,6 @@ pipeline:
     tags: {}
     stages:
         - stage:
-              name: a
-              identifier: a
-              template:
-                  templateRef: ApprovalShell
-                  versionLabel: Version1
-        - stage:
               name: a1
               identifier: a1
               template:
