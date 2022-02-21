@@ -50,4 +50,4 @@ pipeline:
                             - AllErrors
                         action:
                             type: StageRollback
-    description: test h
+    description: test git
