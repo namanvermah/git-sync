@@ -12,3 +12,9 @@ pipeline:
               template:
                   templateRef: ApprovalShell
                   versionLabel: Version1
+        - stage:
+              name: a2
+              identifier: a2
+              template:
+                  templateRef: ApprovalShell
+                  versionLabel: Version1
