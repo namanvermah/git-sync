@@ -7,38 +7,6 @@ pipeline:
     tags: {}
     stages:
         - stage:
-              name: "n"
-              identifier: "n"
-              description: ""
-              type: Approval
-              spec:
-                  execution:
-                      steps:
-                          - step:
-                                name: Approval
-                                identifier: approval
-                                type: HarnessApproval
-                                timeout: 1d
-                                spec:
-                                    approvalMessage: |-
-                                        Please review the following information
-                                        and approve the pipeline progression
-                                    includePipelineExecutionHistory: true
-                                    approvers:
-                                        minimumCount: 1
-                                        disallowPipelineExecutor: false
-                                        userGroups:
-                                            - account.default_peeps
-                                            - account.rbac_peeps
-                                    approverInputs: []
-              tags: {}
-        - stage:
-              name: a2
-              identifier: a2
-              template:
-                  templateRef: ApprovalShell
-                  versionLabel: Version1
-        - stage:
               name: d1
               identifier: d1
               description: ""
