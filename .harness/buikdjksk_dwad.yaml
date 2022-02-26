@@ -1,0 +1,34 @@
+pipeline:
+    name: buikdjksk dwad
+    identifier: buikdjksk_dwad
+    allowStageExecutions: false
+    projectIdentifier: Git_synced
+    orgIdentifier: default
+    tags: {}
+    properties:
+        ci:
+            codebase:
+                connectorRef: nvh
+                build: <+input>
+    stages:
+        - stage:
+              name: mmm
+              identifier: mmm
+              type: CI
+              spec:
+                  cloneCodebase: true
+                  infrastructure:
+                      type: KubernetesDirect
+                      spec:
+                          connectorRef: account.CItestK8sConnectormdo6TVqzDz
+                          namespace: kfhcjcfg
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: jgvhkcfj
+                                identifier: jgvhkcfj
+                                spec:
+                                    connectorRef: account.CItestDockerConnectorYaPB7zEq7X
+                                    image: jlvgkycrdtesy
+                                    command: bhvgkcjrthxegzefd
