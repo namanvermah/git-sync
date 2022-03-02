@@ -83,7 +83,7 @@ pipeline:
                                           source:
                                               type: Inline
                                               spec:
-                                                  script: echo done
+                                                  script: echo doneeeee
                                           environmentVariables: []
                                           outputVariables: []
                                           executionTarget: {}
