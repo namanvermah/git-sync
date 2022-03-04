@@ -1,0 +1,32 @@
+pipeline:
+    name: another approval
+    identifier: another_approval
+    allowStageExecutions: false
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: HarnessApproval
+                                name: "n"
+                                identifier: "n"
+                                spec:
+                                    approvalMessage: Please review the following information and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        userGroups:
+                                            - account.adminsOnly
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                    approverInputs: []
+                                timeout: 1d
+                  serviceDependencies: []
+              tags: {}
