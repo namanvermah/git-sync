@@ -1,0 +1,14 @@
+pipeline:
+    name: nuvycfd
+    identifier: nuvycfd
+    allowStageExecutions: false
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: dsafs
+              identifier: dsafs
+              template:
+                  templateRef: deploy_shell
+                  versionLabel: version1
