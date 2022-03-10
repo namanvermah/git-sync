@@ -1,7 +1,7 @@
 pipeline:
     name: dsv
     identifier: dsv
-    allowStageExecutions: false
+    allowStageExecutions: true
     projectIdentifier: GS_Manager
     orgIdentifier: default
     tags: {}
