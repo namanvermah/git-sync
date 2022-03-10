@@ -1,0 +1,14 @@
+pipeline:
+    name: dsv
+    identifier: dsv
+    allowStageExecutions: false
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: cscsd
+              identifier: cscsd
+              template:
+                  templateRef: deploy_shell
+                  versionLabel: version1
