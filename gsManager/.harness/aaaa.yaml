@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "aaaa"
+  name: "aaaa"
+  orgIdentifier: "default"
+  projectIdentifier: "GS_Manager"
+  pipeline:
+    identifier: "newp"
+    stages:
+    - stage:
+        identifier: "a"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "echo"
+                type: "ShellScript"
+                spec:
+                  source:
+                    type: "Inline"
+                    spec:
+                      script: "echo done"
