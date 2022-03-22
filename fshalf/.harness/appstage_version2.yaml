@@ -1,7 +1,7 @@
 template:
     name: appstage
     identifier: appstage
-    versionLabel: version2
+    versionLabel: version1
     type: Stage
     projectIdentifier: FS
     orgIdentifier: alternate
