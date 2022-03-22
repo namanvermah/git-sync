@@ -1,0 +1,30 @@
+template:
+    name: ApprovalShell
+    identifier: ApprovalShell
+    versionLabel: Version1
+    type: Stage
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    spec:
+        description: ""
+        type: Approval
+        spec:
+            execution:
+                steps:
+                    - step:
+                          type: ShellScript
+                          name: echo
+                          identifier: echo
+                          spec:
+                              shell: Bash
+                              onDelegate: true
+                              source:
+                                  type: Inline
+                                  spec:
+                                      script: ec
+                              environmentVariables: []
+                              outputVariables: []
+                              executionTarget: {}
+                          timeout: 10m
+            serviceDependencies: []
+        tags: {}
