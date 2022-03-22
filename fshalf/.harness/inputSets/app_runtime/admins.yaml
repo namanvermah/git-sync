@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "admins"
+  name: "admins"
+  orgIdentifier: "alternate"
+  projectIdentifier: "FS"
+  pipeline:
+    identifier: "app_runtime"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "approval"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    userGroups:
+                    - "account.adminsOnly"
