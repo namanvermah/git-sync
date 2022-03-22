@@ -1,0 +1,21 @@
+template:
+    name: shell
+    identifier: shell
+    versionLabel: v1
+    type: Step
+    projectIdentifier: FSAGAIN
+    orgIdentifier: alternate
+    tags: {}
+    spec:
+        type: ShellScript
+        timeout: 10m
+        spec:
+            shell: Bash
+            onDelegate: true
+            source:
+                type: Inline
+                spec:
+                    script: echo done
+            environmentVariables: []
+            outputVariables: []
+            executionTarget: {}
