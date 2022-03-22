@@ -1,7 +1,7 @@
 pipeline:
     name: app
     identifier: app
-    allowStageExecutions: false
+    allowStageExecutions: true
     projectIdentifier: FS
     orgIdentifier: alternate
     tags: {}
