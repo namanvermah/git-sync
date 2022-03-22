@@ -1,6 +1,7 @@
 inputSet:
   identifier: "admins"
   name: "admins"
+  description: "admins only that is"
   orgIdentifier: "alternate"
   projectIdentifier: "FS"
   pipeline:
