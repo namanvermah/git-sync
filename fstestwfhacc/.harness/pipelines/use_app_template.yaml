@@ -1,0 +1,27 @@
+pipeline:
+    name: use app template
+    identifier: use_app_template
+    allowStageExecutions: false
+    projectIdentifier: Full_Git_Sync_Sanity_Check
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              template:
+                  templateRef: app_with_shell
+                  versionLabel: v1
+                  templateInputs:
+                      type: Approval
+                      spec:
+                          execution:
+                              steps:
+                                  - step:
+                                        identifier: echo
+                                        type: ShellScript
+                                        spec:
+                                            source:
+                                                type: Inline
+                                                spec:
+                                                    script: <+input>
