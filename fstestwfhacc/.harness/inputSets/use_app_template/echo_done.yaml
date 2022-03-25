@@ -1,6 +1,7 @@
 inputSet:
   identifier: "echo_done"
   name: "echo done"
+  description: "should be successful always"
   orgIdentifier: "default"
   projectIdentifier: "Full_Git_Sync_Sanity_Check"
   pipeline:
