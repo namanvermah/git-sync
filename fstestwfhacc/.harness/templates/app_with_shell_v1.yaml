@@ -25,5 +25,5 @@ template:
                               environmentVariables: []
                               outputVariables: []
                               executionTarget: {}
-                          timeout: 10m
+                          timeout: 15m
             serviceDependencies: []
