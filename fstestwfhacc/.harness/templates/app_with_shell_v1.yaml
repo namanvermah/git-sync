@@ -1,0 +1,29 @@
+template:
+    name: app with shell
+    identifier: app_with_shell
+    versionLabel: v1
+    type: Stage
+    projectIdentifier: Full_Git_Sync_Sanity_Check
+    orgIdentifier: default
+    tags: {}
+    spec:
+        type: Approval
+        spec:
+            execution:
+                steps:
+                    - step:
+                          type: ShellScript
+                          name: echo
+                          identifier: echo
+                          spec:
+                              shell: Bash
+                              onDelegate: true
+                              source:
+                                  type: Inline
+                                  spec:
+                                      script: <+input>
+                              environmentVariables: []
+                              outputVariables: []
+                              executionTarget: {}
+                          timeout: 10m
+            serviceDependencies: []
