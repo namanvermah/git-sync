@@ -1,0 +1,23 @@
+inputSet:
+  identifier: "ten_mins_echo"
+  name: "ten mins echo"
+  orgIdentifier: "default"
+  projectIdentifier: "GS_Manager"
+  pipeline:
+    identifier: "a1s"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "echo"
+                type: "ShellScript"
+                spec:
+                  source:
+                    type: "Inline"
+                    spec:
+                      script: "echo done"
+                timeout: "10m"
