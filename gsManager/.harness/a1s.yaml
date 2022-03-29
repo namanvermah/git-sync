@@ -24,10 +24,10 @@ pipeline:
                                     source:
                                         type: Inline
                                         spec:
-                                            script: echo done
+                                            script: <+input>
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
-                                timeout: 10m
+                                timeout: <+input>
                   serviceDependencies: []
               tags: {}
