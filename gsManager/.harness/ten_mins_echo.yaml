@@ -15,9 +15,4 @@ inputSet:
             - step:
                 identifier: "echo"
                 type: "ShellScript"
-                spec:
-                  source:
-                    type: "Inline"
-                    spec:
-                      script: "echo done"
                 timeout: "10m"
