@@ -1,0 +1,32 @@
+pipeline:
+    name: jlugkyftgf
+    identifier: jlugkyftgf
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: kgyftds
+              identifier: kgyftds
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: ihuytrd
+                                identifier: ihuytrd
+                                type: HarnessApproval
+                                timeout: 1d
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups:
+                                            - account.rbac_peeps
+                                    approverInputs: []
+              tags: {}
