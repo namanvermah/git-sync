@@ -1,5 +1,5 @@
 pipeline:
-    name: pNewBranch
+    name: pNewBranchNewName
     identifier: pNewBranch
     projectIdentifier: simple_gs_1
     orgIdentifier: default
