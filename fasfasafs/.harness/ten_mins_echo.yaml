@@ -1,18 +1,1 @@
-inputSet:
-  identifier: "ten_mins_echo"
-  name: "ten mins echo"
-  orgIdentifier: "default"
-  projectIdentifier: "git_sync_test"
-  pipeline:
-    identifier: "a1"
-    stages:
-    - stage:
-        identifier: "a1"
-        type: "Approval"
-        spec:
-          execution:
-            steps:
-            - step:
-                identifier: "echo"
-                type: "ShellScript"
-                timeout: "10m"
+
