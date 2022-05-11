@@ -3,8 +3,8 @@ pipeline:
     identifier: de
     description: not this one
     allowStageExecutions: false
-    projectIdentifier: FS_ES
-    orgIdentifier: alternate
+    projectIdentifier: simple_gs_1
+    orgIdentifier: default
     tags: {}
     stages:
         - stage:
