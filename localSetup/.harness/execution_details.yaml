@@ -7,7 +7,6 @@ pipeline:
     stages:
         - stage:
               name: a1
-              identifier: a1
               description: ""
               type: Approval
               spec:
