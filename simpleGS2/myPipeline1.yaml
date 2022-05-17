@@ -38,7 +38,7 @@ pipeline:
                                     source:
                                         type: Inline
                                         spec:
-                                            script: echo demo
+                                            script: echo demo 2
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
