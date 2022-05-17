@@ -14,19 +14,14 @@ pipeline:
                   execution:
                       steps:
                           - step:
-                                type: ShellScript
-                                name: echo
-                                identifier: echo
+                                type: Http
+                                name: google
+                                identifier: google
                                 spec:
-                                    shell: Bash
-                                    onDelegate: true
-                                    source:
-                                        type: Inline
-                                        spec:
-                                            script: <+input>
-                                    environmentVariables: []
+                                    url: https://www.google.com
+                                    method: GET
+                                    headers: []
                                     outputVariables: []
-                                    executionTarget: {}
-                                timeout: 10m
+                                timeout: 10s
                   serviceDependencies: []
               tags: {}
