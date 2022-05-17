@@ -28,20 +28,5 @@ pipeline:
                                     outputVariables: []
                                     executionTarget: {}
                                 timeout: 10m
-                          - step:
-                                type: ShellScript
-                                name: echo2
-                                identifier: echo2
-                                spec:
-                                    shell: Bash
-                                    onDelegate: true
-                                    source:
-                                        type: Inline
-                                        spec:
-                                            script: echo done
-                                    environmentVariables: []
-                                    outputVariables: []
-                                    executionTarget: {}
-                                timeout: 10m
                   serviceDependencies: []
               tags: {}
