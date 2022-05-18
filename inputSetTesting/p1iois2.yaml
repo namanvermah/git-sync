@@ -1,0 +1,9 @@
+overlayInputSet:
+    name: p1ois2
+    identifier: p1ois2
+    orgIdentifier: default
+    projectIdentifier: simple_gs_1
+    pipelineIdentifier: p1
+    inputSetReferences:
+    - p1is1
+    - p1is2
