@@ -1,0 +1,19 @@
+inputSet:
+  identifier: "inlineIS1"
+  name: "inlineIS1"
+  orgIdentifier: "default"
+  projectIdentifier: "simple_gs_1"
+  pipeline:
+    identifier: "remote1withruntimeinput"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "approval"
+                type: "HarnessApproval"
+                spec:
+                  approvalMessage: "something something something"
