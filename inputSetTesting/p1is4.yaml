@@ -1,0 +1,19 @@
+inputSet:
+  identifier: "p1is4"
+  name: "p1is4"
+  orgIdentifier: "default"
+  projectIdentifier: "simple_gs_1"
+  pipeline:
+    identifier: "p1"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "approval"
+                type: "HarnessApproval"
+                spec:
+                  approvalMessage: "not something something something"
