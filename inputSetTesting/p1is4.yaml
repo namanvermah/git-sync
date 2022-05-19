@@ -16,4 +16,5 @@ inputSet:
                 identifier: "approval"
                 type: "HarnessApproval"
                 spec:
+                  sd: sd
                   approvalMessage: "not something something something"
