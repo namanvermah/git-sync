@@ -1,6 +1,5 @@
 pipeline:
     name: ss1
-    identifier: ss1
     projectIdentifier: simple_gs_1
     orgIdentifier: default
     tags: {}
@@ -9,6 +8,7 @@ pipeline:
               name: a1
               identifier: a1
               description: ""
+              type: Approval
               spec:
                   execution:
                       steps:
