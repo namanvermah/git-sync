@@ -1,1 +1,30 @@
+pipeline:
+    name: ss1
+    identifier: ss1
+    projectIdentifier: simple_gs_1
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: Approval
+                                identifier: approval
 
+                                timeout: 1d
+                                spec:
+                                    approvalMessage: <+input>
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups:
+                                            - account.adminsOnly
+                                    approverInputs: []
+              tags: {}
