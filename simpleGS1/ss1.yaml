@@ -16,7 +16,7 @@ pipeline:
                           - step:
                                 name: Approval
                                 identifier: approval
-                                type: HarnessApproval
+
                                 timeout: 1d
                                 spec:
                                     approvalMessage: <+input>
