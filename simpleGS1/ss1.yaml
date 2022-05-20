@@ -10,6 +10,7 @@ pipeline:
               identifier: a1
               description: ""
               type: Approval
+              type: App
               spec:
                   execution:
                       steps:
