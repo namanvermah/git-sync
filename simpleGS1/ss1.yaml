@@ -16,7 +16,7 @@ pipeline:
                           - step:
                                 name: Approval
                                 identifier: approval
-
+                                type: Approval
                                 timeout: 1d
                                 spec:
                                     approvalMessage: <+input>
