@@ -1,5 +1,6 @@
 pipeline:
     name: ss1
+    identifier: ss2
     projectIdentifier: simple_gs_1
     orgIdentifier: default
     tags: {}
