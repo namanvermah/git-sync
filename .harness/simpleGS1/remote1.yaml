@@ -1,7 +1,7 @@
 pipeline:
     name: remote one
     identifier: remote1
-    description: here to stay
+    description: here to stay for real
     projectIdentifier: simple_gs_1
     orgIdentifier: default
     tags: {}
@@ -57,3 +57,19 @@ pipeline:
                                             - account.adminsOnly
                                     approverInputs: []
               tags: {}
+        - stage:
+              name: c
+              identifier: c
+              template:
+                  templateRef: simple_harness_approval
+                  versionLabel: v1
+                  templateInputs:
+                      type: Approval
+                      spec:
+                          execution:
+                              steps:
+                                  - step:
+                                        identifier: a1
+                                        type: HarnessApproval
+                                        spec:
+                                            approvalMessage: jhbjugvyfctdghv
