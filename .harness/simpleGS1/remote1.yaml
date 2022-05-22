@@ -61,7 +61,7 @@ pipeline:
               name: c
               identifier: c
               template:
-                  templateRef: simple_harness_approval_
+                  templateRef: simple_harness_approval
                   versionLabel: v1
                   templateInputs:
                       type: Approval
