@@ -1,8 +1,0 @@
-overlayInputSet:
-    name: remhP1ois
-    identifier: remhP1ois
-    orgIdentifier: default
-    projectIdentifier: simple_gs_1
-    pipelineIdentifier: remhP1
-    inputSetReferences:
-    - ss1is1
