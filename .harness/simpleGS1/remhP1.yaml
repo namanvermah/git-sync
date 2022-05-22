@@ -9,7 +9,7 @@ pipeline:
               name: a1
               identifier: a1
               description: ""
-              type: Approvalss
+              type: Approval
               spec:
                   execution:
                       steps:
