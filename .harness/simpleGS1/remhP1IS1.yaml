@@ -16,4 +16,5 @@ inputSet:
                 identifier: "approval"
                 type: "HarnessApproval"
                 spec:
+                  d: s
                   approvalMessage: "not something something something"
