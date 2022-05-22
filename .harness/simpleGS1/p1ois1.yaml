@@ -6,4 +6,3 @@ overlayInputSet:
     pipelineIdentifier: remhP1
     inputSetReferences:
     - ss1is1
-    - fdsdf
