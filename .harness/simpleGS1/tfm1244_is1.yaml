@@ -1,0 +1,19 @@
+inputSet:
+  identifier: "tfm1244_is1"
+  name: "tfm1244 is1"
+  orgIdentifier: "default"
+  projectIdentifier: "simple_gs_1"
+  pipeline:
+    identifier: "tfm1244"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "approval"
+                type: "HarnessApproval"
+                spec:
+                  approvalMessage: "not something something something"
