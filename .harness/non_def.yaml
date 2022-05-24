@@ -1,0 +1,24 @@
+pipeline:
+    name: non def
+    identifier: non_def
+    projectIdentifier: simple_gs_1
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: iuy
+              identifier: iuy
+              template:
+                  templateRef: harness_app
+                  versionLabel: v1
+                  templateInputs:
+                      type: Approval
+                      spec:
+                          execution:
+                              steps:
+                                  - step:
+                                        identifier: a1
+                                        type: HarnessApproval
+                                        spec:
+                                            approvers:
+                                                userGroups: <+input>
