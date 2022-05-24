@@ -22,3 +22,21 @@ pipeline:
                                         spec:
                                             approvers:
                                                 userGroups: <+input>
+        - stage:
+              name: yg
+              identifier: yg
+              template:
+                  templateRef: harness_app
+                  versionLabel: v1
+                  templateInputs:
+                      type: Approval
+                      spec:
+                          execution:
+                              steps:
+                                  - step:
+                                        identifier: a1
+                                        type: HarnessApproval
+                                        spec:
+                                            approvers:
+                                                userGroups: <+input>
+    allowStageExecutions: true
