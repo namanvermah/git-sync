@@ -39,4 +39,4 @@ pipeline:
                                         spec:
                                             approvers:
                                                 userGroups: <+input>
-    allowStageExecutions: true
+    allowStageExecutions: false
