@@ -9,7 +9,7 @@ pipeline:
               name: app
               identifier: app
               description: ""
-              type: Approv
+              type: Approval
               spec:
                   execution:
                       steps:
