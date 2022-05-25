@@ -14,19 +14,10 @@ pipeline:
                   execution:
                       steps:
                           - step:
-                                type: ShellScript
                                 name: echo
                                 identifier: echo
-                                spec:
-                                    shell: Bash
-                                    onDelegate: true
-                                    source:
-                                        type: Inline
-                                        spec:
-                                            script: echo done
-                                    environmentVariables: []
-                                    outputVariables: []
-                                    executionTarget: {}
-                                timeout: 10m
+                                template:
+                                    templateRef: echo_done
+                                    versionLabel: "e1"
                   serviceDependencies: []
               tags: {}
