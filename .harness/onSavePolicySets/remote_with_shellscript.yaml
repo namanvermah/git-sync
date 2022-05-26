@@ -6,8 +6,8 @@ pipeline:
     tags: {}
     stages:
         - stage:
-              name: app
-              identifier: app
+              name: app1
+              identifier: app1
               description: ""
               type: Approval
               spec:
