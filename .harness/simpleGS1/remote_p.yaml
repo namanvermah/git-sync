@@ -1,0 +1,31 @@
+pipeline:
+    name: remote p
+    identifier: remote_p
+    projectIdentifier: On_Save_Policy_Sets
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: ds
+              identifier: ds
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: ds
+                                identifier: ds
+                                type: HarnessApproval
+                                timeout: 1d
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups: <+input>
+                                    approverInputs: []
+              tags: {}
