@@ -8,8 +8,8 @@ pipeline:
     allowStageExecutions: true
     stages:
         - stage:
-              name: a
-              identifier: a
+              name: app
+              identifier: app
               description: ""
               type: Approval
               spec:
