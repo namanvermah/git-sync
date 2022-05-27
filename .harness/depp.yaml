@@ -1,0 +1,51 @@
+pipeline:
+    name: depp
+    identifier: depp
+    projectIdentifier: simple_gs_1
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a
+              identifier: a
+              description: ""
+              type: Deployment
+              spec:
+                  serviceConfig:
+                      serviceRef: dw
+                      serviceDefinition:
+                          spec:
+                              variables: []
+                          type: Kubernetes
+                  infrastructure:
+                      environmentRef: dw
+                      infrastructureDefinition:
+                          type: KubernetesDirect
+                          spec:
+                              connectorRef: account.CItestK8sConnectorBdrdESa9g4
+                              namespace: lkjnjkjkn
+                              releaseName: release-<+INFRA_KEY>
+                      allowSimultaneousDeployments: false
+                  execution:
+                      steps:
+                          - step:
+                                name: Rollout Deployment
+                                identifier: rolloutDeployment
+                                type: K8sRollingDeploy
+                                timeout: 10m
+                                spec:
+                                    skipDryRun: false
+                      rollbackSteps:
+                          - step:
+                                name: Rollback Rollout Deployment
+                                identifier: rollbackRolloutDeployment
+                                type: K8sRollingRollback
+                                timeout: 10m
+                                spec: {}
+              tags: {}
+              failureStrategies:
+                  - onFailure:
+                        errors:
+                            - AllErrors
+                        action:
+                            type: StageRollback
