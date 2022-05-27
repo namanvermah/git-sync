@@ -11,3 +11,4 @@ pipeline:
               template:
                   templateRef: ApprovalShell
                   versionLabel: Version1
+    allowStageExecutions: true
