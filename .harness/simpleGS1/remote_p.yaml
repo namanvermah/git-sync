@@ -8,7 +8,7 @@ pipeline:
         - stage:
               name: ds
               identifier: ds
-              description: ""
+              description: dsdsds
               type: Approval
               spec:
                   execution:
