@@ -1,0 +1,13 @@
+pipeline:
+    name: with template
+    identifier: with_template
+    projectIdentifier: simple_gs_2
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a
+              identifier: a
+              template:
+                  templateRef: approval_shell
+                  versionLabel: v1
