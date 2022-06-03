@@ -1,0 +1,22 @@
+connector:
+  name: nvh
+  identifier: nvh
+  description:
+  orgIdentifier: NGPipeAutoOrgInputSetQYNeBmDv6l
+  projectIdentifier: old_gs_to_delete
+  type: Github
+  spec:
+    url: https://github.com/namanvermah/git-sync
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: namanvermah
+          tokenRef: account.nvh_personal_access_token
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.nvh_personal_access_token
+    executeOnDelegate: false
+    type: Repo
