@@ -1,0 +1,28 @@
+template:
+    name: New Stage Template Name
+    identifier: new_stage_template_name
+    versionLabel: v1
+    type: Stage
+    projectIdentifier: old_gs_to_delete
+    orgIdentifier: NGPipeAutoOrgInputSetQYNeBmDv6l
+    spec:
+        type: Approval
+        spec:
+            execution:
+                steps:
+                    - step:
+                          name: dsa
+                          identifier: dsa
+                          type: HarnessApproval
+                          timeout: 1d
+                          spec:
+                              approvalMessage: |-
+                                  Please review the following information
+                                  and approve the pipeline progression
+                              includePipelineExecutionHistory: true
+                              approvers:
+                                  minimumCount: 1
+                                  disallowPipelineExecutor: false
+                                  userGroups:
+                                      - account.adminsOnly
+                              approverInputs: []
