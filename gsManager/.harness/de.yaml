@@ -6,8 +6,8 @@ pipeline:
     tags: {}
     stages:
         - stage:
-              name: de
-              identifier: de
+              name: des
+              identifier: des
               template:
                   templateRef: ApprovalShell
                   versionLabel: Version1
