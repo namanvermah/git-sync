@@ -8,8 +8,8 @@ pipeline:
     tags: {}
     stages:
         - stage:
-              name: asd
-              identifier: asd
+              name: asdd
+              identifier: asdd
               template:
                   templateRef: new_stage_template_name
                   versionLabel: v1
