@@ -1,0 +1,15 @@
+pipeline:
+    name: a1
+    identifier: a1
+    projectIdentifier: old_gs_to_delete
+    orgIdentifier: NGPipeAutoOrgInputSetQYNeBmDv6l
+    storeType: ""
+    remoteType: create
+    tags: {}
+    stages:
+        - stage:
+              name: asd
+              identifier: asd
+              template:
+                  templateRef: new_stage_template_name
+                  versionLabel: v1
