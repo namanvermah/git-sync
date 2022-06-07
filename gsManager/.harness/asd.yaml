@@ -1,0 +1,15 @@
+pipeline:
+    name: asd
+    identifier: asd
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    storeType: ""
+    remoteType: create
+    tags: {}
+    stages:
+        - stage:
+              name: uygf
+              identifier: uygf
+              template:
+                  templateRef: ApprovalShell
+                  versionLabel: Version1
