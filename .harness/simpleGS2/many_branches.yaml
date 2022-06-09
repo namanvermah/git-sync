@@ -13,3 +13,27 @@ pipeline:
               template:
                   templateRef: approval_shell
                   versionLabel: v1
+        - stage:
+              name: sda
+              identifier: sda
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: das
+                                identifier: das
+                                type: HarnessApproval
+                                timeout: 1d
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups: <+input>
+                                    approverInputs: []
+              tags: {}
