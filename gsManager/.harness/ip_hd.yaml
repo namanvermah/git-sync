@@ -9,7 +9,6 @@ pipeline:
         - stage:
               name: p1
               identifier: p1
-              description: <+input>
               template:
                   templateRef: ApprovalShell
                   versionLabel: Version1
