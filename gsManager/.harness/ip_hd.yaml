@@ -1,0 +1,15 @@
+pipeline:
+    name: ip hd
+    identifier: ip_hd
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    storeType: ""
+    tags: {}
+    stages:
+        - stage:
+              name: p1
+              identifier: p1
+              description: <+input>
+              template:
+                  templateRef: ApprovalShell
+                  versionLabel: Version1
