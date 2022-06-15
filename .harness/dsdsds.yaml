@@ -1,9 +1,0 @@
-overlayInputSet:
-    name: dsdsds
-    identifier: dsdsds
-    orgIdentifier: default
-    projectIdentifier: simple_gs_2
-    pipelineIdentifier: many_branches
-    inputSetReferences:
-        - fdfd
-    tags: {}
