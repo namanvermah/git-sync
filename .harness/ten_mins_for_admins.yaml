@@ -1,0 +1,10 @@
+overlayInputSet:
+    name: ten mins for admins
+    identifier: ten_mins_for_admins
+    orgIdentifier: default
+    projectIdentifier: simple_gs_2
+    pipelineIdentifier: rem2
+    inputSetReferences:
+        - ten_minutes
+        - admins
+    tags: {}
