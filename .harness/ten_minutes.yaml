@@ -1,0 +1,18 @@
+inputSet:
+  identifier: "ten_minutes"
+  name: "ten minutes"
+  orgIdentifier: "default"
+  projectIdentifier: "simple_gs_2"
+  pipeline:
+    identifier: "rem2"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "e1"
+                type: "HarnessApproval"
+                timeout: "10m"
