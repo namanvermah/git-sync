@@ -1,0 +1,10 @@
+overlayInputSet:
+    name: tmfa
+    identifier: tmfa
+    orgIdentifier: default
+    projectIdentifier: simple_gs_2
+    pipelineIdentifier: not this one
+    inputSetReferences:
+        - ten_minutes
+        - admins
+    tags: {}
