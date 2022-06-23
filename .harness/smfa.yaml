@@ -1,6 +1,6 @@
 overlayInputSet:
     name: smfa
-    identifier: six_mins_for_admins
+    identifier: smfa
     orgIdentifier: default
     projectIdentifier: simple_gs_2
     pipelineIdentifier: rem2
