@@ -17,7 +17,7 @@ pipeline:
                                 name: "e1"
                                 identifier: "e1"
                                 type: HarnessApproval
-                                timeout: <+input>
+                                timeout: 10m
                                 spec:
                                     approvalMessage: |-
                                         Please review the following information
@@ -26,6 +26,7 @@ pipeline:
                                     approvers:
                                         minimumCount: 1
                                         disallowPipelineExecutor: false
-                                        userGroups: <+input>
+                                        userGroups:
+                                            - account.adminsOnly
                                     approverInputs: []
               tags: {}
