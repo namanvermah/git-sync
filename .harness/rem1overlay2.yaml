@@ -1,0 +1,10 @@
+overlayInputSet:
+    name: rem1overlay2
+    identifier: rem1overlay2
+    orgIdentifier: default
+    projectIdentifier: simple_gs_2
+    pipelineIdentifier: rem1
+    inputSetReferences:
+        - ten_min
+        - twenty_mins_for_rem1
+    tags: {}
