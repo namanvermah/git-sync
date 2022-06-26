@@ -1,6 +1,7 @@
 inputSet:
   identifier: "ten_min"
   name: "ten min"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "simple_gs_2"
   pipeline:
