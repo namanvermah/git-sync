@@ -1,0 +1,8 @@
+overlayInputSet:
+    name: tenmm
+    identifier: tenmm
+    orgIdentifier: default
+    projectIdentifier: GS_Manager
+    pipelineIdentifier: rem1
+    inputSetReferences:
+        - tenm
