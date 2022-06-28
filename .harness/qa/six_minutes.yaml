@@ -1,18 +1,19 @@
 inputSet:
-  identifier: six_minutes
-  name: six minutes
-  orgIdentifier: default
-  projectIdentifier: simple_gs_2
+  identifier: "six_minutes"
+  name: "six minutes"
+  orgIdentifier: "default"
+  projectIdentifier: "Ramyasimplegit"
   pipeline:
-    identifier: rem2
+    identifier: "rem1"
     stages:
     - stage:
-        identifier: a1
-        type: Approval
+        identifier: "a1"
+        type: "Approval"
         spec:
           execution:
             steps:
             - step:
-                identifier: e1
-                type: HarnessApproval
-                timeout: 6m
+                identifier: "e1"
+                type: "HarnessApproval"
+                timeout: "6m"
+  description: ""
