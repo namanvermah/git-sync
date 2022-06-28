@@ -1,0 +1,18 @@
+inputSet:
+  identifier: six_minutes
+  name: six minutes
+  orgIdentifier: default
+  projectIdentifier: simple_gs_2
+  pipeline:
+    identifier: rem2
+    stages:
+    - stage:
+        identifier: a1
+        type: Approval
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: e1
+                type: HarnessApproval
+                timeout: 6m
