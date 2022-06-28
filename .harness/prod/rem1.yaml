@@ -1,0 +1,53 @@
+pipeline:
+    name: rem1
+    identifier: rem1
+    projectIdentifier: naidu_simplified_git_exp
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: stage 1
+              identifier: stage_1
+              description: ""
+              type: Deployment
+              spec:
+                  serviceConfig:
+                      serviceRef: service_1
+                      serviceDefinition:
+                          spec:
+                              variables: []
+                          type: Kubernetes
+                  infrastructure:
+                      environmentRef: prod_env_1
+                      infrastructureDefinition:
+                          type: KubernetesDirect
+                          spec:
+                              connectorRef: account.Test_K8_Cluster_Connector
+                              namespace: <+input>
+                              releaseName: release-<+INFRA_KEY>
+                      allowSimultaneousDeployments: false
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: echo
+                                identifier: echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: echo done
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: <+input>
+                      rollbackSteps: []
+              tags: {}
+              failureStrategies:
+                  - onFailure:
+                        errors:
+                            - AllErrors
+                        action:
+                            type: StageRollback
