@@ -1,6 +1,6 @@
 pipeline:
-  name: "rem2"
-  identifier: "rem2"
+  name: "rem3"
+  identifier: "rem3"
   projectIdentifier: "Ramyasimplegit"
   orgIdentifier: "default"
   tags: {}
