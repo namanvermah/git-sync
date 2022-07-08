@@ -1,6 +1,7 @@
 inputSet:
   identifier: "ten_minutes"
   name: "ten minutes"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "naidu_simplified_git_exp"
   pipeline:
@@ -18,4 +19,4 @@ inputSet:
                 timeout: "10m"
                 spec:
                   approvers:
-                    minimumCount: 2
+                    minimumCount: 1
