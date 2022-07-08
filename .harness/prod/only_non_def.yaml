@@ -3,6 +3,7 @@ pipeline:
     identifier: only_non_def
     projectIdentifier: naidu_simplified_git_exp
     orgIdentifier: default
+    description: pipeline desc
     tags: {}
     stages:
         - stage:
