@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "tenm_one"
+  name: "tenm one"
+  orgIdentifier: "default"
+  projectIdentifier: "naidu_simplified_git_exp"
+  pipeline:
+    identifier: "p1p1p1"
+    stages:
+    - stage:
+        identifier: "a2"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "e1"
+                type: "HarnessApproval"
+                timeout: "10m"
+                spec:
+                  approvers:
+                    minimumCount: 1
