@@ -16,7 +16,6 @@ inputSet:
             - step:
                 identifier: "e1"
                 type: "HarnessApproval"
-                timeout: "10m"
                 spec:
                   approvers:
                     minimumCount: 1
