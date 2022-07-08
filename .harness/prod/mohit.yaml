@@ -17,7 +17,7 @@ pipeline:
                                 name: "e1"
                                 identifier: "e1"
                                 type: HarnessApproval
-                                timeout: <+input>
+                                timeout: 1h
                                 spec:
                                     approvalMessage: |-
                                         Please review the following information
