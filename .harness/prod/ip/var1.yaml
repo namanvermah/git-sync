@@ -1,0 +1,11 @@
+inputSet:
+  identifier: "var1"
+  name: "var1"
+  orgIdentifier: "default"
+  projectIdentifier: "naidu_simplified_git_exp"
+  pipeline:
+    identifier: "only_non_def"
+    variables:
+    - name: "var1"
+      type: "String"
+      value: "v1"
