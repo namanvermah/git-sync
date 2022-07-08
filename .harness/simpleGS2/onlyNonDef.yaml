@@ -8,7 +8,7 @@ pipeline:
         - stage:
               name: a1
               identifier: a1
-              description: ""
+              description: sd
               type: Approval
               spec:
                   execution:
