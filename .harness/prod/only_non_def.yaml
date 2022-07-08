@@ -5,6 +5,10 @@ pipeline:
     orgIdentifier: default
     description: pipeline desc
     tags: {}
+    variables:
+        - name: var1
+          type: String
+          value: <+input>
     stages:
         - stage:
               name: a1
