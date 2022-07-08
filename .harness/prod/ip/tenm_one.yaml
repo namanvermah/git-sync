@@ -1,6 +1,7 @@
 inputSet:
   identifier: "tenm_one"
   name: "tenm one"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "naidu_simplified_git_exp"
   pipeline:
@@ -18,4 +19,4 @@ inputSet:
                 timeout: "10m"
                 spec:
                   approvers:
-                    minimumCount: 1
+                    minimumCount: 2
