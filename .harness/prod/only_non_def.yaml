@@ -13,7 +13,7 @@ pipeline:
         - stage:
               name: a1
               identifier: a1
-              description: ""
+              description: stage desc
               type: Approval
               spec:
                   execution:
