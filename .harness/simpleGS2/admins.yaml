@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "admins"
+  name: "admins"
+  orgIdentifier: "default"
+  projectIdentifier: "simple_gs_2"
+  pipeline:
+    identifier: "onlyNonDef"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "a1"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    userGroups:
+                    - "account.adminsOnly"
