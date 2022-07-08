@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "readers"
+  name: "readers"
+  orgIdentifier: "default"
+  projectIdentifier: "naidu_simplified_git_exp"
+  pipeline:
+    identifier: "only_non_def"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "e1"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    userGroups:
+                    - "account.Read"
