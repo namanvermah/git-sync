@@ -1,0 +1,18 @@
+inputSet:
+  identifier: "ten_mins"
+  name: "ten mins"
+  orgIdentifier: "default"
+  projectIdentifier: "naidu_simplified_git_exp"
+  pipeline:
+    identifier: "input_set_curr_error_exp"
+    stages:
+    - stage:
+        identifier: "e1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "e1"
+                type: "HarnessApproval"
+                timeout: "10m"
