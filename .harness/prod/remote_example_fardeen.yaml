@@ -1,0 +1,31 @@
+pipeline:
+    name: remote example fardeen
+    identifier: remote_example_fardeen
+    projectIdentifier: naidu_simplified_git_exp
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: h1
+                                identifier: h1
+                                type: HarnessApproval
+                                timeout: <+input>
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups: <+input>
+                                    approverInputs: []
+              tags: {}
