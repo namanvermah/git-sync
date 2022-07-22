@@ -14,5 +14,5 @@ inputSet:
             steps:
             - step:
                 identifier: "e1"
-                type: "HarnessApproval"
+                type: "HarsApproval"
                 timeout: "10m"
