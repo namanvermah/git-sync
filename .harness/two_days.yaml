@@ -1,18 +1,1 @@
-inputSet:
-  identifier: "two_days"
-  name: "two days"
-  orgIdentifier: "default"
-  projectIdentifier: "naidu_simplified_git_exp"
-  pipeline:
-    identifier: "remote_example_fardeen"
-    stages:
-    - stage:
-        identifier: "a1"
-        type: "Approval"
-        spec:
-          execution:
-            steps:
-            - step:
-                identifier: "h1"
-                type: "HarnessApproval"
-                timeout: "2d"
+
