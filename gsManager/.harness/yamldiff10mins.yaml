@@ -13,6 +13,6 @@ inputSet:
           execution:
             steps:
             - step:
-                identifier: "echo"
-                type: "ShellScript"
+                identifier: "h1"
+                type: "HarnessApproval"
                 timeout: "10m"
