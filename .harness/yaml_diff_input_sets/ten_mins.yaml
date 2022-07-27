@@ -18,5 +18,6 @@ inputSet:
                 timeout: "10m"
             - step:
                 identifier: "echo"
+                name: "echo"
                 type: "ShellScript"
                 timeout: "10m"
