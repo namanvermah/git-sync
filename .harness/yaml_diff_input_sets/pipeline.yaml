@@ -17,7 +17,7 @@ pipeline:
                                 name: h1
                                 identifier: h1
                                 type: HarnessApproval
-                                timeout: <+input>
+                                timeout: 1d
                                 spec:
                                     approvalMessage: |-
                                         Please review the following information
@@ -43,5 +43,5 @@ pipeline:
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
-                                timeout: <+input>
+                                timeout: 1d
               tags: {}
