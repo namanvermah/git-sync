@@ -43,5 +43,5 @@ pipeline:
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
-                                timeout: <+input>
+                                timeout: 10m
               tags: {}
