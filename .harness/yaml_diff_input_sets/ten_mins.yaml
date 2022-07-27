@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "ten_mins"
+  name: "ten mins"
+  orgIdentifier: "default"
+  projectIdentifier: "simple_gs_2"
+  pipeline:
+    identifier: "yaml_diff_input_sets"
+    stages:
+    - stage:
+        identifier: "a1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "h1"
+                type: "HarnessApproval"
+                timeout: "10m"
+            - step:
+                identifier: "echo"
+                type: "ShellScript"
+                timeout: "10m"
