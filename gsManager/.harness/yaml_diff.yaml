@@ -1,0 +1,47 @@
+pipeline:
+    name: yaml diff
+    identifier: yaml_diff
+    projectIdentifier: GS_Manager
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: a1
+              identifier: a1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: h1
+                                identifier: h1
+                                type: HarnessApproval
+                                timeout: <+input>
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        disallowPipelineExecutor: false
+                                        userGroups:
+                                            - account.adminsOnly
+                                        minimumCount: 1
+                                    approverInputs: []
+                          - step:
+                                type: ShellScript
+                                name: echo
+                                identifier: echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: echo done
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: <+input>
+              tags: {}
