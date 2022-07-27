@@ -5,5 +5,6 @@ overlayInputSet:
     projectIdentifier: simple_gs_2
     pipelineIdentifier: yaml_diff_input_sets
     inputSetReferences:
-        - tesn_mins
+        - ten_mins
+        - ten_minss
     tags: {}
