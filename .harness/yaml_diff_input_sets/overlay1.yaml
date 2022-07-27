@@ -1,0 +1,9 @@
+overlayInputSet:
+    name: overlay1
+    identifier: overlay1
+    orgIdentifier: default
+    projectIdentifier: simple_gs_2
+    pipelineIdentifier: yaml_diff_input_sets
+    inputSetReferences:
+        - ten_mins
+    tags: {}
