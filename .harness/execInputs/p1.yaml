@@ -1,0 +1,31 @@
+pipeline:
+  name: p1
+  identifier: p1
+  projectIdentifier: new_git_exp
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: app1
+        identifier: app1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: echo
+                  identifier: echo
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>.executionInput()
+                    environmentVariables: []
+                    outputVariables: []
+                    executionTarget: {}
+                  timeout: 10m
+        tags: {}
