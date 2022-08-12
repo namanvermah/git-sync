@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: <+input>.executionInput()
+                        script: <+input>.executionInput().default(echo default)
                     environmentVariables: []
                     outputVariables: []
                     executionTarget: {}
