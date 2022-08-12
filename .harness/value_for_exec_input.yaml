@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "value_for_exec_input"
+  name: "value for exec input"
+  orgIdentifier: "default"
+  projectIdentifier: "new_git_exp"
+  pipeline:
+    identifier: "p1"
+    stages:
+    - stage:
+        identifier: "app1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "echo"
+                type: "ShellScript"
+                spec:
+                  source:
+                    type: "Inline"
+                    spec:
+                      script: "echo \"from input set non fixed\""
