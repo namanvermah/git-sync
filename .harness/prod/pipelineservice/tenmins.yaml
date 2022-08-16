@@ -1,7 +1,6 @@
 inputSet:
   identifier: "tenmins"
   name: "tenmins"
-  orgIdentifier: "default"
   projectIdentifier: "naidu_simplified_git_exp"
   pipeline:
     identifier: "pipeline_service"
