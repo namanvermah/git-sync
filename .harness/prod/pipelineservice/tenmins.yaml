@@ -1,4 +1,4 @@
-pipeline:
+inputSet:
   identifier: "tenmins"
   name: "tenmins"
   orgIdentifier: "default"
