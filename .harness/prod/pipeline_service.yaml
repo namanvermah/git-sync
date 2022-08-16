@@ -19,9 +19,7 @@ pipeline:
                                 type: HarnessApproval
                                 timeout: <+input>
                                 spec:
-                                    approvalMessage: |-
-                                        Please review the following info
-                                        and approve the pipeline progression
+                                    approvalMessage: <+input>
                                     includePipelineExecutionHistory: true
                                     approvers:
                                         minimumCount: 1
