@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "gdiyd_three"
+  name: "gdiyd_three"
+  orgIdentifier: "default"
+  projectIdentifier: "simple_gs_2"
+  pipeline:
+    identifier: "git_details_in_yaml_diff"
+    stages:
+    - stage:
+        identifier: "shell"
+        type: "Custom"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "echo"
+                type: "ShellScript"
+                spec:
+                  source:
+                    type: "Inline"
+                    spec:
+                      script: "echo three"
