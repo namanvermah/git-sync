@@ -1,0 +1,10 @@
+overlayInputSet:
+    name: gdiyd_one_two
+    identifier: gdiyd_one_two
+    orgIdentifier: default
+    projectIdentifier: simple_gs_2
+    pipelineIdentifier: git_details_in_yaml_diff
+    inputSetReferences:
+        - gdiyd_one
+        - gdiyd_two
+    tags: {}
