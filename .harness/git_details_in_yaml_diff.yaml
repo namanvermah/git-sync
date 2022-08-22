@@ -1,0 +1,31 @@
+pipeline:
+    name: git details in yaml diff
+    identifier: git_details_in_yaml_diff
+    projectIdentifier: simple_gs_2
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: shell
+              identifier: shell
+              description: ""
+              type: Custom
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                type: ShellScript
+                                name: echo
+                                identifier: echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: <+input>
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: <+input>
+              tags: {}
