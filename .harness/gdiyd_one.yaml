@@ -19,5 +19,5 @@ inputSet:
                   source:
                     type: "Inline"
                     spec:
-                      script: "echo done"
+                      script: "echo done one"
                 timeout: "1m"
