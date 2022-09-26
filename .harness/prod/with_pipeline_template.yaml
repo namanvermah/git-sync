@@ -1,0 +1,31 @@
+pipeline:
+  name: with pipeline template
+  identifier: with_pipeline_template
+  template:
+    templateRef: all_approval
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: a1
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: h1
+                      type: HarnessApproval
+                      timeout: <+input>
+        - stage:
+            identifier: a2
+            type: Approval
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: h1
+                      type: HarnessApproval
+                      timeout: <+input>
+  tags: {}
+  projectIdentifier: naidusanity
+  orgIdentifier: default
