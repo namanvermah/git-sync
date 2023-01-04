@@ -1,21 +1,22 @@
 pipeline:
-  name: remote with template
-  identifier: remote_with_template
-  projectIdentifier: naidusanity
-  orgIdentifier: default
+  name: "remote with template"
+  identifier: "remote_with_template"
+  projectIdentifier: "naidusanity"
+  orgIdentifier: "default"
   tags: {}
   stages:
-    - stage:
-        name: s1
-        identifier: s1
-        template:
-          templateRef: StageTagsTesting
-          versionLabel: v1
-          templateInputs:
-            type: Deployment
-            spec:
-              infrastructure:
-                infrastructureDefinition:
-                  type: KubernetesDirect
-                  spec:
-                    namespace: <+input>
+  - stage:
+      name: "s1"
+      identifier: "s1"
+      template:
+        templateRef: "StageTagsTesting"
+        versionLabel: "v1"
+        templateInputs:
+          type: "Deployment"
+          spec:
+            infrastructure:
+              infrastructureDefinition:
+                type: "KubernetesDirect"
+                spec:
+                  connectorRef: "<+input>"
+                  namespace: "<+input>"
