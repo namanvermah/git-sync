@@ -1,0 +1,22 @@
+pipeline:
+  name: rem
+  identifier: rem
+  projectIdentifier: Plain_Old_Project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: asw
+        identifier: asw
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: Wait
+                  identifier: Wait
+                  spec:
+                    duration: <+input>
+        tags: {}
