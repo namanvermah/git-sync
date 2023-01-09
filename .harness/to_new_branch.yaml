@@ -1,0 +1,19 @@
+inputSet:
+  name: to new branch
+  identifier: to_new_branch
+  orgIdentifier: default
+  projectIdentifier: Plain_Old_Project
+  pipeline:
+    identifier: rem
+    stages:
+      - stage:
+          identifier: asw
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Wait
+                    type: Wait
+                    spec:
+                      duration: 1m
