@@ -3,6 +3,7 @@ pipeline:
   identifier: remote_with_description
   projectIdentifier: Plain_Old_Project
   orgIdentifier: default
+  description: lets see
   tags: {}
   stages:
     - stage:
