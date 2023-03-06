@@ -1,0 +1,19 @@
+pipeline:
+  name: remote with template
+  identifier: remote_with_template
+  projectIdentifier: Plain_Old_Project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cc
+        identifier: cc
+        template:
+          templateRef: with_num_var
+          versionLabel: v1
+          templateInputs:
+            type: Custom
+            variables:
+              - name: minutes
+                type: Number
+                value: <+input>.allowedValues(10,20,30)
