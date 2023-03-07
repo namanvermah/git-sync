@@ -9,7 +9,7 @@ pipeline:
         name: rem
         identifier: rem
         description: ""
-        type: Custom
+        type: Customs
         spec:
           execution:
             steps:
