@@ -19,4 +19,10 @@ pipeline:
                   identifier: Wait_1
                   spec:
                     duration: 10m
+              - step:
+                  name: ss1
+                  identifier: ss1
+                  template:
+                    templateRef: shell
+                    versionLabel: v1
         tags: {}
