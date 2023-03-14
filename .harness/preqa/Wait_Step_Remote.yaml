@@ -13,12 +13,6 @@ pipeline:
           execution:
             steps:
               - step:
-                  name: ss2
-                  identifier: ss2
-                  template:
-                    templateRef: echo_step_1
-                    versionLabel: v1
-              - step:
                   type: HarnessApproval
                   name: Harness Approval_1
                   identifier: HarnessApproval_1
