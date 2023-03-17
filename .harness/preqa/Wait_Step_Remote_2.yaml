@@ -1,8 +1,4 @@
 pipeline:
-  name: Wait Step Remote 2
-  identifier: Wait_Step_Remote_2
-  projectIdentifier: nv_project
-  orgIdentifier: default
   stages:
     - stage:
         name: c1
