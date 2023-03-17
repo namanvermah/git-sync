@@ -1,0 +1,19 @@
+template:
+  name: custom1
+  identifier: custom1
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: testing
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: Wait_1
+              identifier: Wait_1
+              template:
+                templateRef: basic_wait
+                versionLabel: v1
