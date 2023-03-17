@@ -1,0 +1,28 @@
+pipeline:
+  name: Wait Step Remote 2
+  identifier: Wait_Step_Remote_2
+  projectIdentifier: nv_project
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: c1
+        identifier: c1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: HarnessApproval
+                  name: Harness Approval_1
+                  identifier: HarnessApproval_1
+                  spec:
+                    approvalMessage: Please review the following information and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      userGroups:
+                        - account._account_all_users
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                    approverInputs: []
+                  timeout: 1d
