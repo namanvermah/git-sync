@@ -1,0 +1,22 @@
+pipeline:
+  name: bkhyut
+  identifier: bkhyut
+  projectIdentifier: testing
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sa
+        identifier: sa
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
+                  spec:
+                    duration: 10m
+        tags: {}
